@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.basecamp.bc3" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.basecamp.bc3.BasecampApplication" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:taskAffinity="" android:theme="@style/BasecampTheme">
+        <activity android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="false" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Splash" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LaunchpadActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.AccountFrozenActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.AccountCancellationActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.TodoNewActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.TodoCreatedActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/toolbar_search" android:name="com.basecamp.bc3.activities.SearchActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Transparent" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.CatchUpActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Transparent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewCampfireActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewTodolistActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewTodosetActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewPingActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewFormActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.BookmarksActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewModalActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.basecamp.bc3.features.imageviewer.ImageViewerActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.BlackStatusBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.basecamp.bc3.activities.MediaActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.BlackStatusBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.basecamp.bc3.activities.PdfViewerActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.BlackStatusBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.basecamp.bc3.activities.FileViewerActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.ReportsActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.ErrorMessageActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginOrSignUpActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginGoogleOrEmailActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginPasswordActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginForgotPasswordActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginForgotPasswordConfirmationActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginNoAccountActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginInvitationsActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginPasswordlessActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginPasswordlessConfirmationActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginBC2AccountActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginBCCAccountActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginTwoFactorActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LoginDebugScenariosActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.LogoutActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.QuickAddTodoActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.QuickAddEventActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.QuickAddMessageActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.QuickAddFileUploadActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.FilePickerActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.QuickAddChatActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:label="@string/share_sheet_icon_label" android:name="com.basecamp.bc3.activities.QuickAddSelectActionActivity" android:noHistory="true" android:theme="@style/BasecampTheme.Dialog">
+            <intent-filter android:label="@string/share_sheet_icon_label">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.basecamp.bc3.activities.PersonProfileActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.UpdateAvatarActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.UpdateLogoActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:label="@string/app_name" android:name="com.basecamp.bc3.activities.ProjectCardActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.SharedTransition"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.ComposerActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.DrawingActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.PingsActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.PeopleActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.webviewnativeinterface.SelectElementPickerActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:label="@string/app_name" android:name="com.basecamp.bc3.activities.BasecampUrlFilterActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/1.*" android:scheme="https"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/2.*" android:scheme="https"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/3.*" android:scheme="https"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/4.*" android:scheme="https"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/5.*" android:scheme="https"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/6.*" android:scheme="https"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/7.*" android:scheme="https"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/8.*" android:scheme="https"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/9.*" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.basecamp.bc3.activities.VerifyFilterEmailActivity" android:theme="@style/BasecampTheme.Default">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="3.basecamp.com" android:pathPattern="/email/verify/.*" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.basecamp.bc3.activities.VerifyFilterWelcomeActivity" android:theme="@style/BasecampTheme.Default">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="3.basecamp.com" android:pathPattern=".*welcome/verified" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.QuestionAnswerRoutingActivity" android:noHistory="true" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.SignUpActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.SignUpTwoFactorActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.SignUpPasswordActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.SignUpGoogleActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.SignUpMarketingActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.AccountSetupActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.InvitationDebugScenariosActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.TransparentStatusBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.GifChooserActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.GifPreviewActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.QueenbeeFormActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewBreadcrumbsTitleActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.basecamp.bc3.activities.WebViewBreadcrumbsActivity" android:parentActivityName="com.basecamp.bc3.activities.HomeActivity" android:theme="@style/BasecampTheme.Default.Horizontal"/>
+        <provider android:authorities="com.basecamp.bc3.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <service android:exported="false" android:name="com.basecamp.bc3.notifications.FcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.basecamp.bc3.notifications.NotificationDeleteReceiver"/>
+        <receiver android:name="com.basecamp.bc3.notifications.NotificationMarkAsReadReceiver"/>
+        <receiver android:name="com.basecamp.bc3.notifications.NotificationSnoozeReceiver"/>
+        <receiver android:name="com.basecamp.bc3.notifications.NotificationFileUploadReceiver"/>
+        <receiver android:name="com.basecamp.bc3.notifications.NotificationDirectReplyReceiver"/>
+        <receiver android:name="com.basecamp.bc3.features.uploads.FileUploadCancelReceiver"/>
+        <meta-data android:name="io.sentry.auto-init" android:value="false"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.basecamp.bc3.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.basecamp.bc3.SentryInitProvider" android:exported="false" android:name="io.sentry.android.core.SentryInitProvider"/>
+        <provider android:authorities="com.basecamp.bc3.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+    </application>
+</manifest>

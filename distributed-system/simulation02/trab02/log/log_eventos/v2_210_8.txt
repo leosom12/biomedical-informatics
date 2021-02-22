@@ -1,0 +1,175 @@
+./version02 8
+
+===========================================================
+Algoritmo VCube - Versão 02
+Aluna: Mariana Moreira dos Santos
+Disciplina: Sistemas Distribuídos
+Última Modificação: 02 de fevereiro de 2021
+===========================================================
+
+----------------------------------------------------------- 
+Existem 8 processos e 3 clusters no sistema.
+O tempo do intervalo de testes é de 30.0 unidades de tempo.
+O tempo máximo de execução é de 210.0 unidades de tempo.
+
+TEMPO -- (testador, testado) = resultado do teste
+----------------------------------------------------------- 
+
+
+ --------------------  RODADA 1 ---------------------- 
+
+ 30.0 -- (0, 1) = CORRETO 
+ 30.0 -- (1, 0) = CORRETO 
+ 30.0 -- (2, 3) = CORRETO 
+ 30.0 -- (3, 2) = CORRETO 
+ 30.0 -- (4, 5) = CORRETO 
+ 30.0 -- (5, 4) = CORRETO 
+ 30.0 -- (6, 7) = CORRETO 
+ 30.0 -- (7, 6) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 2:  -1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  -1  -1  -1  -1  0  0  -1  -1 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  0  0  -1  -1 
+VETOR STATE DO PROCESSO 6:  -1  -1  -1  -1  -1  -1  0  0 
+VETOR STATE DO PROCESSO 7:  -1  -1  -1  -1  -1  -1  0  0 
+
+Número de testes realizados até o momento: 8 
+
+
+
+ --------------------  RODADA 2 ---------------------- 
+O processo 0 falhou no tempo 31.0
+
+ 60.0 -- (1, 2) = CORRETO 
+ 60.0 -- (2, 0) = PROCESSO FALHO 
+ 60.0 -- (3, 1) = CORRETO 
+ 60.0 -- (4, 6) = CORRETO 
+ 60.0 -- (5, 7) = CORRETO 
+ 60.0 -- (6, 4) = CORRETO 
+ 60.0 -- (7, 5) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 2:  1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  -1  -1  -1  -1  0  0  0  0 
+
+Número de testes realizados até o momento: 15 
+
+
+
+
+ --------------------  RODADA 3 ---------------------- 
+O processo 2 falhou no tempo 90.0
+
+ 90.0 -- (1, 4) = CORRETO 
+ 90.0 -- (3, 6) = CORRETO 
+ 90.0 -- (4, 0) = PROCESSO FALHO 
+ 90.0 -- (5, 1) = CORRETO 
+ 90.0 -- (6, 2) = PROCESSO FALHO 
+ 90.0 -- (7, 3) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 4:  1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  -1  -1  1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 21 
+
+
+
+
+ --------------------  RODADA 4 ---------------------- 
+O processo 3 falhou no tempo 110.0
+
+120.0 -- (1, 0) = PROCESSO FALHO 
+120.0 -- (4, 1) = CORRETO 
+120.0 -- (5, 4) = CORRETO 
+120.0 -- (6, 7) = CORRETO 
+120.0 -- (7, 6) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  1  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  -1  1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  1  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  1  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  1  0  0  0  0  0 
+
+Número de testes realizados até o momento: 26 
+
+
+
+
+ --------------------  RODADA 5 ---------------------- 
+150.0 -- (1, 2) = PROCESSO FALHO 
+150.0 -- (1, 3) = PROCESSO FALHO 
+150.0 -- (4, 6) = CORRETO 
+150.0 -- (5, 7) = CORRETO 
+150.0 -- (6, 4) = CORRETO 
+150.0 -- (7, 5) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  -1  1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  1  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  1  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  1  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  1  0  1  0  0  0  0  0 
+
+Número de testes realizados até o momento: 32 
+
+
+
+
+ --------------------  RODADA 6 ---------------------- 
+180.0 -- (1, 4) = CORRETO 
+180.0 -- (4, 0) = PROCESSO FALHO 
+180.0 -- (5, 1) = CORRETO 
+180.0 -- (6, 2) = PROCESSO FALHO 
+180.0 -- (7, 3) = PROCESSO FALHO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  -1  1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  1  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  1  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  1  0  1  1  0  0  0  0 
+
+Número de testes realizados até o momento: 37 
+
+
+
+
+ --------------------  RODADA 7 ---------------------- 
+210.0 -- (1, 0) = PROCESSO FALHO 
+
+Rodada não finalizada. 
+
+
+
+
+ ================================================================================ 
+
+ ------------------------------ FIM DA SIMULAÇÃO --------------------------------
+
+Resultados:
+3 evento(s) ocorreu/ocorreram durante a simulação.
+Número de rodadas de testes completas durante a simulação: 6
+Ocorreram 38 testes ao total.
+
+ ================================================================================ 

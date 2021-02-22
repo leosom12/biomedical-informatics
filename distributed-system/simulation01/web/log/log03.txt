@@ -1,0 +1,621 @@
+./task03 30
+===========================================================
+Algoritmo VRing
+Aluna: Mariana Moreira dos Santos
+Disciplina: Sistemas Distribuidos
+Ultima Modificacao: 15/12/2020
+===========================================================
+
+
+----------------------------------------------------------- 
+Existem 30 processos no sistema.
+O tempo do intervalo de testes é de 30.0 unidades de tempo.
+O tempo máximo de execução é de 150.0 unidades de tempo.
+----------------------------------------------------------- 
+
+Vetor STATE do processo 0
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 1 foi atualizado para 0
+O processo 0 encontrou o processo 1 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 1
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 2 foi atualizado para 0
+O processo 1 encontrou o processo 2 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 2
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 3 foi atualizado para 0
+O processo 2 encontrou o processo 3 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 3
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 4 foi atualizado para 0
+O processo 3 encontrou o processo 4 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 4
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 5 foi atualizado para 0
+O processo 4 encontrou o processo 5 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 5
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 6 foi atualizado para 0
+O processo 5 encontrou o processo 6 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 6
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 7 foi atualizado para 0
+O processo 6 encontrou o processo 7 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 7
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 8 foi atualizado para 0
+O processo 7 encontrou o processo 8 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 8
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 9 foi atualizado para 0
+O processo 8 encontrou o processo 9 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 9
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 10 foi atualizado para 0
+O processo 9 encontrou o processo 10 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 10
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 11 foi atualizado para 0
+O processo 10 encontrou o processo 11 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 11
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 12 foi atualizado para 0
+O processo 11 encontrou o processo 12 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 12
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 13 foi atualizado para 0
+O processo 12 encontrou o processo 13 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 13
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 14 foi atualizado para 0
+O processo 13 encontrou o processo 14 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 14
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 15 foi atualizado para 0
+O processo 14 encontrou o processo 15 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 15
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 16 foi atualizado para 0
+O processo 15 encontrou o processo 16 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 16
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 17 foi atualizado para 0
+O processo 16 encontrou o processo 17 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 17
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 18 foi atualizado para 0
+O processo 17 encontrou o processo 18 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 18
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 19 foi atualizado para 0
+O processo 18 encontrou o processo 19 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 19
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 20 foi atualizado para 0
+O processo 19 encontrou o processo 20 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 20
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 21 foi atualizado para 0
+O processo 20 encontrou o processo 21 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 21
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 22 foi atualizado para 0
+O processo 21 encontrou o processo 22 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 22
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 23 foi atualizado para 0
+O processo 22 encontrou o processo 23 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 23
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 24 foi atualizado para 0
+O processo 23 encontrou o processo 24 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 24
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 25 foi atualizado para 0
+O processo 24 encontrou o processo 25 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 25
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 26 foi atualizado para 0
+O processo 25 encontrou o processo 26 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 26
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 27 foi atualizado para 0
+O processo 26 encontrou o processo 27 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 27
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 28 foi atualizado para 0
+O processo 27 encontrou o processo 28 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 28
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 29 foi atualizado para 0
+O processo 28 encontrou o processo 29 SEM-FALHA no tempo  30.0
+------
+Vetor STATE do processo 29
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 0 foi atualizado para 0
+O processo 29 encontrou o processo 0 SEM-FALHA no tempo  30.0
+------
+O processo 1 falhou no tempo 31.0
+Vetor STATE do processo 0
+0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 1 foi atualizado para 1 (com falha)
+O processo 0 encontrou o processo 1 FALHO no tempo  60.0 e continuou a procurar
+------
+O valor de STATE do processo 2 foi atualizado para 0
+O processo 0 encontrou o processo 2 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 2
+0 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 3 foi atualizado para 0
+O processo 2 encontrou o processo 3 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 3
+0 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 4 foi atualizado para 0
+O processo 3 encontrou o processo 4 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 4
+0 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 5 foi atualizado para 0
+O processo 4 encontrou o processo 5 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 5
+0 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 6 foi atualizado para 0
+O processo 5 encontrou o processo 6 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 6
+0 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 7 foi atualizado para 0
+O processo 6 encontrou o processo 7 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 7
+0 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 8 foi atualizado para 0
+O processo 7 encontrou o processo 8 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 8
+0 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 9 foi atualizado para 0
+O processo 8 encontrou o processo 9 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 9
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 10 foi atualizado para 0
+O processo 9 encontrou o processo 10 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 10
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 11 foi atualizado para 0
+O processo 10 encontrou o processo 11 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 11
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 12 foi atualizado para 0
+O processo 11 encontrou o processo 12 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 12
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 13 foi atualizado para 0
+O processo 12 encontrou o processo 13 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 13
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 14 foi atualizado para 0
+O processo 13 encontrou o processo 14 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 14
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 15 foi atualizado para 0
+O processo 14 encontrou o processo 15 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 15
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 16 foi atualizado para 0
+O processo 15 encontrou o processo 16 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 16
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 17 foi atualizado para 0
+O processo 16 encontrou o processo 17 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 17
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 18 foi atualizado para 0
+O processo 17 encontrou o processo 18 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 18
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 19 foi atualizado para 0
+O processo 18 encontrou o processo 19 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 19
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 20 foi atualizado para 0
+O processo 19 encontrou o processo 20 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 20
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 21 foi atualizado para 0
+O processo 20 encontrou o processo 21 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 21
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 22 foi atualizado para 0
+O processo 21 encontrou o processo 22 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 22
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 23 foi atualizado para 0
+O processo 22 encontrou o processo 23 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 23
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 
+O valor de STATE do processo 24 foi atualizado para 0
+O processo 23 encontrou o processo 24 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 24
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 
+O valor de STATE do processo 25 foi atualizado para 0
+O processo 24 encontrou o processo 25 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 25
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 
+O valor de STATE do processo 26 foi atualizado para 0
+O processo 25 encontrou o processo 26 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 26
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 
+O valor de STATE do processo 27 foi atualizado para 0
+O processo 26 encontrou o processo 27 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 27
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 
+O valor de STATE do processo 28 foi atualizado para 0
+O processo 27 encontrou o processo 28 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 28
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 
+O valor de STATE do processo 29 foi atualizado para 0
+O processo 28 encontrou o processo 29 SEM-FALHA no tempo  60.0
+------
+Vetor STATE do processo 29
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 0 foi atualizado para 0
+O processo 29 encontrou o processo 0 SEM-FALHA no tempo  60.0
+------
+O processo 1 recuperou no tempo 61.0
+Vetor STATE do processo 0
+0 1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 1 foi atualizado para 0
+O processo 0 encontrou o processo 1 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 2
+0 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 3 foi atualizado para 0
+O processo 2 encontrou o processo 3 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 3
+0 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 4 foi atualizado para 0
+O processo 3 encontrou o processo 4 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 4
+0 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 5 foi atualizado para 0
+O processo 4 encontrou o processo 5 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 5
+0 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 6 foi atualizado para 0
+O processo 5 encontrou o processo 6 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 6
+0 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 7 foi atualizado para 0
+O processo 6 encontrou o processo 7 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 7
+0 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 8 foi atualizado para 0
+O processo 7 encontrou o processo 8 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 8
+0 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 9 foi atualizado para 0
+O processo 8 encontrou o processo 9 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 9
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 10 foi atualizado para 0
+O processo 9 encontrou o processo 10 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 10
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 11 foi atualizado para 0
+O processo 10 encontrou o processo 11 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 11
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 12 foi atualizado para 0
+O processo 11 encontrou o processo 12 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 12
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 13 foi atualizado para 0
+O processo 12 encontrou o processo 13 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 13
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 14 foi atualizado para 0
+O processo 13 encontrou o processo 14 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 14
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 15 foi atualizado para 0
+O processo 14 encontrou o processo 15 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 15
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 16 foi atualizado para 0
+O processo 15 encontrou o processo 16 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 16
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 17 foi atualizado para 0
+O processo 16 encontrou o processo 17 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 17
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 18 foi atualizado para 0
+O processo 17 encontrou o processo 18 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 18
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 19 foi atualizado para 0
+O processo 18 encontrou o processo 19 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 19
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 20 foi atualizado para 0
+O processo 19 encontrou o processo 20 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 20
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 21 foi atualizado para 0
+O processo 20 encontrou o processo 21 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 21
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 22 foi atualizado para 0
+O processo 21 encontrou o processo 22 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 22
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 23 foi atualizado para 0
+O processo 22 encontrou o processo 23 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 23
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 
+O valor de STATE do processo 24 foi atualizado para 0
+O processo 23 encontrou o processo 24 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 24
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 
+O valor de STATE do processo 25 foi atualizado para 0
+O processo 24 encontrou o processo 25 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 25
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 
+O valor de STATE do processo 26 foi atualizado para 0
+O processo 25 encontrou o processo 26 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 26
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 
+O valor de STATE do processo 27 foi atualizado para 0
+O processo 26 encontrou o processo 27 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 27
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 
+O valor de STATE do processo 28 foi atualizado para 0
+O processo 27 encontrou o processo 28 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 28
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 
+O valor de STATE do processo 29 foi atualizado para 0
+O processo 28 encontrou o processo 29 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 29
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 0 foi atualizado para 0
+O processo 29 encontrou o processo 0 SEM-FALHA no tempo  90.0
+------
+Vetor STATE do processo 1
+0 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 2 foi atualizado para 0
+O processo 1 encontrou o processo 2 SEM-FALHA no tempo  91.0
+------
+Vetor STATE do processo 0
+0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 1 foi atualizado para 0
+O processo 0 encontrou o processo 1 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 2
+0 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 3 foi atualizado para 0
+O processo 2 encontrou o processo 3 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 3
+0 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 4 foi atualizado para 0
+O processo 3 encontrou o processo 4 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 4
+0 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 5 foi atualizado para 0
+O processo 4 encontrou o processo 5 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 5
+0 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 6 foi atualizado para 0
+O processo 5 encontrou o processo 6 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 6
+0 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 7 foi atualizado para 0
+O processo 6 encontrou o processo 7 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 7
+0 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 8 foi atualizado para 0
+O processo 7 encontrou o processo 8 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 8
+0 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 9 foi atualizado para 0
+O processo 8 encontrou o processo 9 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 9
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 10 foi atualizado para 0
+O processo 9 encontrou o processo 10 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 10
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 11 foi atualizado para 0
+O processo 10 encontrou o processo 11 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 11
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 12 foi atualizado para 0
+O processo 11 encontrou o processo 12 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 12
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 13 foi atualizado para 0
+O processo 12 encontrou o processo 13 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 13
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 14 foi atualizado para 0
+O processo 13 encontrou o processo 14 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 14
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 15 foi atualizado para 0
+O processo 14 encontrou o processo 15 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 15
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 16 foi atualizado para 0
+O processo 15 encontrou o processo 16 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 16
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 17 foi atualizado para 0
+O processo 16 encontrou o processo 17 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 17
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 18 foi atualizado para 0
+O processo 17 encontrou o processo 18 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 18
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 19 foi atualizado para 0
+O processo 18 encontrou o processo 19 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 19
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 20 foi atualizado para 0
+O processo 19 encontrou o processo 20 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 20
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 21 foi atualizado para 0
+O processo 20 encontrou o processo 21 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 21
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 22 foi atualizado para 0
+O processo 21 encontrou o processo 22 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 22
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 23 foi atualizado para 0
+O processo 22 encontrou o processo 23 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 23
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 -1 
+O valor de STATE do processo 24 foi atualizado para 0
+O processo 23 encontrou o processo 24 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 24
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 -1 
+O valor de STATE do processo 25 foi atualizado para 0
+O processo 24 encontrou o processo 25 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 25
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 -1 
+O valor de STATE do processo 26 foi atualizado para 0
+O processo 25 encontrou o processo 26 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 26
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 
+O valor de STATE do processo 27 foi atualizado para 0
+O processo 26 encontrou o processo 27 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 27
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 
+O valor de STATE do processo 28 foi atualizado para 0
+O processo 27 encontrou o processo 28 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 28
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 
+O valor de STATE do processo 29 foi atualizado para 0
+O processo 28 encontrou o processo 29 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 29
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 0 foi atualizado para 0
+O processo 29 encontrou o processo 0 SEM-FALHA no tempo 120.0
+------
+Vetor STATE do processo 1
+0 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 2 foi atualizado para 0
+O processo 1 encontrou o processo 2 SEM-FALHA no tempo 121.0
+------
+Vetor STATE do processo 0
+0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+O valor de STATE do processo 1 foi atualizado para 0
+O processo 0 encontrou o processo 1 SEM-FALHA no tempo 150.0
+------
+

@@ -1,0 +1,136 @@
+===========================================================
+Algoritmo VRing
+Aluna: Mariana Moreira dos Santos
+Disciplina: Sistemas Distribuidos
+Ultima Modificacao: 15/12/2020
+===========================================================
+
+----------------------------------------------------------- 
+Existem 30 processos no sistema.
+O tempo do intervalo de testes é de 30.0 unidades de tempo.
+O tempo máximo de execução é de 150.0 unidades de tempo.
+----------------------------------------------------------- 
+
+O processo 0 vai testar no tempo 30.0
+O processo 1 vai testar no tempo 30.0
+O processo 2 vai testar no tempo 30.0
+O processo 3 vai testar no tempo 30.0
+O processo 4 vai testar no tempo 30.0
+O processo 5 vai testar no tempo 30.0
+O processo 6 vai testar no tempo 30.0
+O processo 7 vai testar no tempo 30.0
+O processo 8 vai testar no tempo 30.0
+O processo 9 vai testar no tempo 30.0
+O processo 10 vai testar no tempo 30.0
+O processo 11 vai testar no tempo 30.0
+O processo 12 vai testar no tempo 30.0
+O processo 13 vai testar no tempo 30.0
+O processo 14 vai testar no tempo 30.0
+O processo 15 vai testar no tempo 30.0
+O processo 16 vai testar no tempo 30.0
+O processo 17 vai testar no tempo 30.0
+O processo 18 vai testar no tempo 30.0
+O processo 19 vai testar no tempo 30.0
+O processo 20 vai testar no tempo 30.0
+O processo 21 vai testar no tempo 30.0
+O processo 22 vai testar no tempo 30.0
+O processo 23 vai testar no tempo 30.0
+O processo 24 vai testar no tempo 30.0
+O processo 25 vai testar no tempo 30.0
+O processo 26 vai testar no tempo 30.0
+O processo 27 vai testar no tempo 30.0
+O processo 28 vai testar no tempo 30.0
+O processo 29 vai testar no tempo 30.0
+O processo 1 falhou no tempo 31.0
+O processo 0 vai testar no tempo 60.0
+O processo 2 vai testar no tempo 60.0
+O processo 3 vai testar no tempo 60.0
+O processo 4 vai testar no tempo 60.0
+O processo 5 vai testar no tempo 60.0
+O processo 6 vai testar no tempo 60.0
+O processo 7 vai testar no tempo 60.0
+O processo 8 vai testar no tempo 60.0
+O processo 9 vai testar no tempo 60.0
+O processo 10 vai testar no tempo 60.0
+O processo 11 vai testar no tempo 60.0
+O processo 12 vai testar no tempo 60.0
+O processo 13 vai testar no tempo 60.0
+O processo 14 vai testar no tempo 60.0
+O processo 15 vai testar no tempo 60.0
+O processo 16 vai testar no tempo 60.0
+O processo 17 vai testar no tempo 60.0
+O processo 18 vai testar no tempo 60.0
+O processo 19 vai testar no tempo 60.0
+O processo 20 vai testar no tempo 60.0
+O processo 21 vai testar no tempo 60.0
+O processo 22 vai testar no tempo 60.0
+O processo 23 vai testar no tempo 60.0
+O processo 24 vai testar no tempo 60.0
+O processo 25 vai testar no tempo 60.0
+O processo 26 vai testar no tempo 60.0
+O processo 27 vai testar no tempo 60.0
+O processo 28 vai testar no tempo 60.0
+O processo 29 vai testar no tempo 60.0
+O processo 1 recuperou no tempo 61.0
+O processo 0 vai testar no tempo 90.0
+O processo 2 vai testar no tempo 90.0
+O processo 3 vai testar no tempo 90.0
+O processo 4 vai testar no tempo 90.0
+O processo 5 vai testar no tempo 90.0
+O processo 6 vai testar no tempo 90.0
+O processo 7 vai testar no tempo 90.0
+O processo 8 vai testar no tempo 90.0
+O processo 9 vai testar no tempo 90.0
+O processo 10 vai testar no tempo 90.0
+O processo 11 vai testar no tempo 90.0
+O processo 12 vai testar no tempo 90.0
+O processo 13 vai testar no tempo 90.0
+O processo 14 vai testar no tempo 90.0
+O processo 15 vai testar no tempo 90.0
+O processo 16 vai testar no tempo 90.0
+O processo 17 vai testar no tempo 90.0
+O processo 18 vai testar no tempo 90.0
+O processo 19 vai testar no tempo 90.0
+O processo 20 vai testar no tempo 90.0
+O processo 21 vai testar no tempo 90.0
+O processo 22 vai testar no tempo 90.0
+O processo 23 vai testar no tempo 90.0
+O processo 24 vai testar no tempo 90.0
+O processo 25 vai testar no tempo 90.0
+O processo 26 vai testar no tempo 90.0
+O processo 27 vai testar no tempo 90.0
+O processo 28 vai testar no tempo 90.0
+O processo 29 vai testar no tempo 90.0
+O processo 1 vai testar no tempo 91.0
+O processo 0 vai testar no tempo 120.0
+O processo 2 vai testar no tempo 120.0
+O processo 3 vai testar no tempo 120.0
+O processo 4 vai testar no tempo 120.0
+O processo 5 vai testar no tempo 120.0
+O processo 6 vai testar no tempo 120.0
+O processo 7 vai testar no tempo 120.0
+O processo 8 vai testar no tempo 120.0
+O processo 9 vai testar no tempo 120.0
+O processo 10 vai testar no tempo 120.0
+O processo 11 vai testar no tempo 120.0
+O processo 12 vai testar no tempo 120.0
+O processo 13 vai testar no tempo 120.0
+O processo 14 vai testar no tempo 120.0
+O processo 15 vai testar no tempo 120.0
+O processo 16 vai testar no tempo 120.0
+O processo 17 vai testar no tempo 120.0
+O processo 18 vai testar no tempo 120.0
+O processo 19 vai testar no tempo 120.0
+O processo 20 vai testar no tempo 120.0
+O processo 21 vai testar no tempo 120.0
+O processo 22 vai testar no tempo 120.0
+O processo 23 vai testar no tempo 120.0
+O processo 24 vai testar no tempo 120.0
+O processo 25 vai testar no tempo 120.0
+O processo 26 vai testar no tempo 120.0
+O processo 27 vai testar no tempo 120.0
+O processo 28 vai testar no tempo 120.0
+O processo 29 vai testar no tempo 120.0
+O processo 1 vai testar no tempo 121.0
+O processo 0 vai testar no tempo 150.0
+

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.udemy.android" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:maxSdkVersion="23" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:allowAudioPlaybackCapture="false" android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.udemy.android.CombinedApplication" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:resizeableActivity="true" android:supportsRtl="true" android:theme="@style/Theme.Udemy">
+        <meta-data android:name="firebase_performance_logcat_enabled" android:value="false"/>
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false"/>
+        <activity android:name="com.udemy.android.CombinedDeepLinkActivity" android:theme="@style/Theme.Udemy.Instructor">
+            <intent-filter>
+                <action android:name="com.udemy.android.NOTIFICATIONPRESSED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:label="@string/filter_title_deep_linking">
+                <data android:scheme="udemy"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true" android:label="@string/filter_title_deep_linking">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.udemy.com" android:path="/deeplink" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true" android:label="@string/filter_title_deep_linking">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="udemy.app.link" android:pathPattern="/.*" android:scheme="https"/>
+                <data android:host="udemy.test-app.link" android:pathPattern="/.*" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter android:label="@string/filter_title_deep_linking">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.udemy.com" android:path="/deeplink" android:scheme="udemy"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.udemy.android.receivers.AppUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.udemy.android.SplashActivity" android:theme="@style/Theme.Udemy.Status">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.activity.MarketplaceMainActivity" android:theme="@style/Theme.Udemy.Status"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:icon="@mipmap/ic_launcher" android:label="@string/activity_name_no_talkback_voice" android:launchMode="singleTop" android:name="com.udemy.android.coursetaking.CourseTakingActivity" android:parentActivityName="com.udemy.android.activity.MarketplaceMainActivity" android:theme="@style/Theme.Udemy.CourseTaking"/>
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_dkmkLOFE7jz8nKqIcFl0hliaamb5MyJ6"/>
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_odgEKD7HeY8pCwFbkosrribgArahL8zN"/>
+        <receiver android:exported="false" android:name="com.udemy.android.BrazeBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.udemy.android.intent.APPBOY_PUSH_RECEIVED"/>
+                <action android:name="com.udemy.android.intent.APPBOY_NOTIFICATION_OPENED"/>
+                <action android:name="com.udemy.android.intent.APPBOY_PUSH_DELETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.student.coursetaking.discussion.list.DiscussionActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.udemy.android.instructor.InstructorMainActivity" android:theme="@style/Theme.Udemy.Instructor"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.udemy.android.instructor.unpublished.UnpublishedInstructorActivity" android:theme="@style/Theme.Udemy.Instructor"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.udemy.android.instructor.inbox.details.MessageDetailsActivity" android:theme="@style/Theme.Udemy.Instructor" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.udemy.android.instructor.reviews.details.ReviewDetailsActivity" android:theme="@style/Theme.Udemy.Instructor" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.udemy.android.instructor.student.StudentProfileActivity" android:theme="@style/Theme.Udemy.Instructor"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.udemy.android.instructor.account.PushNotificationsActivity" android:theme="@style/Theme.Udemy.Instructor" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.udemy.android.instructor.onboarding.InstructorOnboardingActivity" android:theme="@style/Theme.Udemy.Instructor"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.udemy.android.instructor.inbox.reports.ReportAbuseActivity" android:theme="@style/Theme.Udemy.Instructor"/>
+        <activity android:label="@string/instructor_community" android:name="com.udemy.android.instructor.community.CommunityWebViewActivity" android:theme="@style/Theme.Udemy.Instructor"/>
+        <activity android:configChanges="keyboardHidden|screenSize" android:name="com.udemy.android.login.onboarding.OnboardingActivity" android:theme="@style/Theme.Udemy.Status"/>
+        <activity android:configChanges="keyboardHidden|screenSize" android:name="com.udemy.android.login.LoginActivity" android:theme="@style/Theme.Udemy.Status" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@style/com_facebook_activity_theme"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="cct.com.udemy.android" android:scheme="fbconnect"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|screenSize" android:name="com.udemy.android.diagnostics.ui.DiagnosticsInfoActivity" android:theme="@style/Theme.Udemy"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:name="com.appboy.AppboyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|screenSize" android:name="com.udemy.android.account.AccountOptionsActivity"/>
+        <activity android:configChanges="keyboardHidden|screenSize" android:name="com.udemy.android.learningreminders.LearningRemindersActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.LogoutActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.PostEnrollmentActivity"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.activity.WebViewActivity"/>
+        <activity android:label="@string/about_this_course_" android:name="com.udemy.android.coursetaking.about.AboutCourseActivity"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.coursetaking.resources.CourseResourcesContainerActivity"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.coursetaking.announcements.AnnouncementActivity"/>
+        <activity android:label="@string/about_lecture" android:name="com.udemy.android.coursetaking.about.AboutLectureActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.coursetaking.nonvideo.NonVideoLectureContainerActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.coursetaking.nonvideo.ebook.dropbox.DropboxPdfActivity"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:launchMode="singleTask" android:name="com.udemy.android.cast.ExpandedControlsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Udemy.ExpandedController"/>
+        <activity android:label="@string/support_activity_title" android:name="zendesk.support.guide.HelpCenterActivity" android:theme="@style/Theme.Zendesk.WhiteCursor" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="zendesk.support.request.RequestActivity" android:theme="@style/Theme.Zendesk" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/zs_view_article_loading_title" android:name="zendesk.support.guide.ViewArticleActivity" android:theme="@style/Theme.Zendesk"/>
+        <activity android:label="@string/request_list_activity_title" android:name="zendesk.support.requestlist.RequestListActivity" android:theme="@style/Theme.Zendesk"/>
+        <service android:enabled="true" android:exported="true" android:label="@string/app_name" android:name="com.udemy.android.player.exoplayer.UdemyExoplayerService">
+            <intent-filter>
+                <action android:name="com.udemy.android.player.exoplayer.UdemyExoplayerService"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.udemy.android.cast.CastOptionsProvider"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/udemy_facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>
+        <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/activity_name_no_talkback_voice" android:launchMode="singleTop" android:name="com.udemy.android.activity.LecturePreviewActivity" android:theme="@style/Theme.Udemy.CourseTaking"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.activity.clp.ClpActivity" android:screenOrientation="behind" android:theme="@style/Theme.Udemy.Status.Clp"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.activity.clp.ClpCurriculumActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.activity.clp.ClpSeeAllActivity"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.activity.FullScreenImageActivity" android:theme="@style/Theme.Udemy.Showcase"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.cart.ShoppingCartActivity"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.cart.ShoppingCartSeeAllActivity"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.course.CourseForwardingActivity"/>
+        <activity android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.activity.BroadcastTakeoverActivity" android:theme="@style/Theme.Udemy.FullScreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/activity_name_no_talkback_voice" android:name="com.udemy.android.activity.clp.paidcourses.ClpViewPaidCoursesActivity"/>
+        <service android:name="com.udemy.android.downloads.DownloadService"/>
+        <receiver android:name="com.udemy.android.receivers.TimeChangeBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.udemy.android.downloads.hls.AdaptiveStreamDownloadService">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.udemy.android.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:exported="false" android:name="zendesk.support.DeepLinkingBroadcastReceiver">
+            <intent-filter>
+                <action android:name="zendesk.support"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.udemy.android.zendesk.support.SupportSdkStartupProvider" android:enabled="true" android:exported="false" android:name="zendesk.support.SupportSdkStartupProvider"/>
+        <provider android:authorities="com.udemy.android.zendesk.support.GuideSdkStartupProvider" android:enabled="true" android:exported="false" android:name="zendesk.support.guide.GuideSdkStartupProvider"/>
+        <activity android:name="zendesk.messaging.MessagingActivity" android:windowSoftInputMode="adjustResize"/>
+        <provider android:authorities="com.udemy.android.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider"/>
+        <provider android:authorities="com.udemy.android.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.udemy.android.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"/>
+        <service android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaNotificationService"/>
+        <service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.appboy.ui.AppboyWebViewActivity"/>
+        <activity android:exported="false" android:name="com.appboy.ui.activities.AppboyFeedActivity"/>
+        <activity android:exported="false" android:name="com.appboy.ui.activities.AppboyContentCardsActivity"/>
+        <activity android:exported="false" android:launchMode="singleInstance" android:name="com.appboy.push.AppboyNotificationRoutingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="false" android:name="com.appboy.BrazePushReceiver"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.udemy.android.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <provider android:authorities="com.udemy.android.belvedere2.attachments" android:exported="false" android:grantUriPermissions="true" android:name="zendesk.belvedere.BelvedereFileProvider" android:readPermission="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/belvedere_attachment_storage_v2"/>
+        </provider>
+        <provider android:authorities="com.udemy.android.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
+        <activity android:enabled="false" android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <service android:enabled="false" android:exported="true" android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"/>
+        <receiver android:exported="false" android:name="com.appboy.receivers.AppboyActionReceiver"/>
+        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

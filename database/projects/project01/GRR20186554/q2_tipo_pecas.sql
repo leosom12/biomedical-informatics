@@ -1,0 +1,4 @@
+SELECT 
+	DISTINCT (p_type)
+FROM
+	PART;

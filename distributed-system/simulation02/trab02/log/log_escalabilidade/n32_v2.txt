@@ -1,0 +1,676 @@
+./version02 32
+
+===========================================================
+Algoritmo VCube - Versão 02
+Aluna: Mariana Moreira dos Santos
+Disciplina: Sistemas Distribuídos
+Última Modificação: 02 de fevereiro de 2021
+===========================================================
+
+----------------------------------------------------------- 
+Existem 32 processos e 5 clusters no sistema.
+O tempo do intervalo de testes é de 30.0 unidades de tempo.
+O tempo máximo de execução é de 300.0 unidades de tempo.
+
+TEMPO -- (testador, testado) = resultado do teste
+----------------------------------------------------------- 
+
+
+ --------------------  RODADA 1 ---------------------- 
+
+ 30.0 -- (0, 1) = CORRETO 
+ 30.0 -- (1, 0) = CORRETO 
+ 30.0 -- (2, 3) = CORRETO 
+ 30.0 -- (3, 2) = CORRETO 
+ 30.0 -- (4, 5) = CORRETO 
+ 30.0 -- (5, 4) = CORRETO 
+ 30.0 -- (6, 7) = CORRETO 
+ 30.0 -- (7, 6) = CORRETO 
+ 30.0 -- (8, 9) = CORRETO 
+ 30.0 -- (9, 8) = CORRETO 
+ 30.0 -- (10, 11) = CORRETO 
+ 30.0 -- (11, 10) = CORRETO 
+ 30.0 -- (12, 13) = CORRETO 
+ 30.0 -- (13, 12) = CORRETO 
+ 30.0 -- (14, 15) = CORRETO 
+ 30.0 -- (15, 14) = CORRETO 
+ 30.0 -- (16, 17) = CORRETO 
+ 30.0 -- (17, 16) = CORRETO 
+ 30.0 -- (18, 19) = CORRETO 
+ 30.0 -- (19, 18) = CORRETO 
+ 30.0 -- (20, 21) = CORRETO 
+ 30.0 -- (21, 20) = CORRETO 
+ 30.0 -- (22, 23) = CORRETO 
+ 30.0 -- (23, 22) = CORRETO 
+ 30.0 -- (24, 25) = CORRETO 
+ 30.0 -- (25, 24) = CORRETO 
+ 30.0 -- (26, 27) = CORRETO 
+ 30.0 -- (27, 26) = CORRETO 
+ 30.0 -- (28, 29) = CORRETO 
+ 30.0 -- (29, 28) = CORRETO 
+ 30.0 -- (30, 31) = CORRETO 
+ 30.0 -- (31, 30) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 2:  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 6:  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 7:  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 8:  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 9:  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 10: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 11: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 12: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 13: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 14: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 15: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 16: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 17: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 18: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 19: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 20: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 21: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 22: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 23: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 24: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 25: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 26: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 27: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 28: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1 
+VETOR STATE DO PROCESSO 29: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  -1  -1 
+VETOR STATE DO PROCESSO 30: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0 
+VETOR STATE DO PROCESSO 31: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0 
+
+Número de testes realizados até o momento: 32 
+
+
+
+ --------------------  RODADA 2 ---------------------- 
+ 60.0 -- (0, 2) = CORRETO 
+ 60.0 -- (1, 3) = CORRETO 
+ 60.0 -- (2, 0) = CORRETO 
+ 60.0 -- (3, 1) = CORRETO 
+ 60.0 -- (4, 6) = CORRETO 
+ 60.0 -- (5, 7) = CORRETO 
+ 60.0 -- (6, 4) = CORRETO 
+ 60.0 -- (7, 5) = CORRETO 
+ 60.0 -- (8, 10) = CORRETO 
+ 60.0 -- (9, 11) = CORRETO 
+ 60.0 -- (10, 8) = CORRETO 
+ 60.0 -- (11, 9) = CORRETO 
+ 60.0 -- (12, 14) = CORRETO 
+ 60.0 -- (13, 15) = CORRETO 
+ 60.0 -- (14, 12) = CORRETO 
+ 60.0 -- (15, 13) = CORRETO 
+ 60.0 -- (16, 18) = CORRETO 
+ 60.0 -- (17, 19) = CORRETO 
+ 60.0 -- (18, 16) = CORRETO 
+ 60.0 -- (19, 17) = CORRETO 
+ 60.0 -- (20, 22) = CORRETO 
+ 60.0 -- (21, 23) = CORRETO 
+ 60.0 -- (22, 20) = CORRETO 
+ 60.0 -- (23, 21) = CORRETO 
+ 60.0 -- (24, 26) = CORRETO 
+ 60.0 -- (25, 27) = CORRETO 
+ 60.0 -- (26, 24) = CORRETO 
+ 60.0 -- (27, 25) = CORRETO 
+ 60.0 -- (28, 30) = CORRETO 
+ 60.0 -- (29, 31) = CORRETO 
+ 60.0 -- (30, 28) = CORRETO 
+ 60.0 -- (31, 29) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 6:  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 7:  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 8:  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 9:  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 10: -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 11: -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 12: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 13: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 14: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 15: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 16: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 17: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 18: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 19: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 20: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 21: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 22: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 23: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 24: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 25: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 26: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 27: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 28: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 29: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 30: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 31: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0 
+
+Número de testes realizados até o momento: 64 
+
+
+
+ --------------------  RODADA 3 ---------------------- 
+ 90.0 -- (0, 4) = CORRETO 
+ 90.0 -- (1, 5) = CORRETO 
+ 90.0 -- (2, 6) = CORRETO 
+ 90.0 -- (3, 7) = CORRETO 
+ 90.0 -- (4, 0) = CORRETO 
+ 90.0 -- (5, 1) = CORRETO 
+ 90.0 -- (6, 2) = CORRETO 
+ 90.0 -- (7, 3) = CORRETO 
+ 90.0 -- (8, 12) = CORRETO 
+ 90.0 -- (9, 13) = CORRETO 
+ 90.0 -- (10, 14) = CORRETO 
+ 90.0 -- (11, 15) = CORRETO 
+ 90.0 -- (12, 8) = CORRETO 
+ 90.0 -- (13, 9) = CORRETO 
+ 90.0 -- (14, 10) = CORRETO 
+ 90.0 -- (15, 11) = CORRETO 
+ 90.0 -- (16, 20) = CORRETO 
+ 90.0 -- (17, 21) = CORRETO 
+ 90.0 -- (18, 22) = CORRETO 
+ 90.0 -- (19, 23) = CORRETO 
+ 90.0 -- (20, 16) = CORRETO 
+ 90.0 -- (21, 17) = CORRETO 
+ 90.0 -- (22, 18) = CORRETO 
+ 90.0 -- (23, 19) = CORRETO 
+ 90.0 -- (24, 28) = CORRETO 
+ 90.0 -- (25, 29) = CORRETO 
+ 90.0 -- (26, 30) = CORRETO 
+ 90.0 -- (27, 31) = CORRETO 
+ 90.0 -- (28, 24) = CORRETO 
+ 90.0 -- (29, 25) = CORRETO 
+ 90.0 -- (30, 26) = CORRETO 
+ 90.0 -- (31, 27) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 6:  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 8:  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 9:  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 10: -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 11: -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 12: -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 13: -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 14: -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 15: -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 16: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 17: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 18: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 19: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 20: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 21: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 22: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 23: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 24: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 25: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 26: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 27: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 28: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 29: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 30: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 31: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 96 
+
+
+
+ --------------------  RODADA 4 ---------------------- 
+120.0 -- (0, 8) = CORRETO 
+120.0 -- (1, 9) = CORRETO 
+120.0 -- (2, 10) = CORRETO 
+120.0 -- (3, 11) = CORRETO 
+120.0 -- (4, 12) = CORRETO 
+120.0 -- (5, 13) = CORRETO 
+120.0 -- (6, 14) = CORRETO 
+120.0 -- (7, 15) = CORRETO 
+120.0 -- (8, 0) = CORRETO 
+120.0 -- (9, 1) = CORRETO 
+120.0 -- (10, 2) = CORRETO 
+120.0 -- (11, 3) = CORRETO 
+120.0 -- (12, 4) = CORRETO 
+120.0 -- (13, 5) = CORRETO 
+120.0 -- (14, 6) = CORRETO 
+120.0 -- (15, 7) = CORRETO 
+120.0 -- (16, 24) = CORRETO 
+120.0 -- (17, 25) = CORRETO 
+120.0 -- (18, 26) = CORRETO 
+120.0 -- (19, 27) = CORRETO 
+120.0 -- (20, 28) = CORRETO 
+120.0 -- (21, 29) = CORRETO 
+120.0 -- (22, 30) = CORRETO 
+120.0 -- (23, 31) = CORRETO 
+120.0 -- (24, 16) = CORRETO 
+120.0 -- (25, 17) = CORRETO 
+120.0 -- (26, 18) = CORRETO 
+120.0 -- (27, 19) = CORRETO 
+120.0 -- (28, 20) = CORRETO 
+120.0 -- (29, 21) = CORRETO 
+120.0 -- (30, 22) = CORRETO 
+120.0 -- (31, 23) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 6:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 8:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 9:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 10: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 11: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 12: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 13: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 14: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 15: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 16: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 17: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 18: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 19: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 20: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 21: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 22: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 23: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 24: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 25: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 26: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 27: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 28: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 29: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 30: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 31: -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 128 
+
+
+
+ --------------------  RODADA 5 ---------------------- 
+150.0 -- (0, 16) = CORRETO 
+150.0 -- (1, 17) = CORRETO 
+150.0 -- (2, 18) = CORRETO 
+150.0 -- (3, 19) = CORRETO 
+150.0 -- (4, 20) = CORRETO 
+150.0 -- (5, 21) = CORRETO 
+150.0 -- (6, 22) = CORRETO 
+150.0 -- (7, 23) = CORRETO 
+150.0 -- (8, 24) = CORRETO 
+150.0 -- (9, 25) = CORRETO 
+150.0 -- (10, 26) = CORRETO 
+150.0 -- (11, 27) = CORRETO 
+150.0 -- (12, 28) = CORRETO 
+150.0 -- (13, 29) = CORRETO 
+150.0 -- (14, 30) = CORRETO 
+150.0 -- (15, 31) = CORRETO 
+150.0 -- (16, 0) = CORRETO 
+150.0 -- (17, 1) = CORRETO 
+150.0 -- (18, 2) = CORRETO 
+150.0 -- (19, 3) = CORRETO 
+150.0 -- (20, 4) = CORRETO 
+150.0 -- (21, 5) = CORRETO 
+150.0 -- (22, 6) = CORRETO 
+150.0 -- (23, 7) = CORRETO 
+150.0 -- (24, 8) = CORRETO 
+150.0 -- (25, 9) = CORRETO 
+150.0 -- (26, 10) = CORRETO 
+150.0 -- (27, 11) = CORRETO 
+150.0 -- (28, 12) = CORRETO 
+150.0 -- (29, 13) = CORRETO 
+150.0 -- (30, 14) = CORRETO 
+150.0 -- (31, 15) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 4:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 8:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 9:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 10: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 11: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 12: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 13: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 14: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 15: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 16: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 17: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 18: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 19: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 20: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 21: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 22: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 23: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 24: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 25: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 26: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 27: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 28: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 29: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 30: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 31: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 160 
+
+
+
+ --------------------  RODADA 6 ---------------------- 
+180.0 -- (0, 1) = CORRETO 
+180.0 -- (1, 0) = CORRETO 
+180.0 -- (2, 3) = CORRETO 
+180.0 -- (3, 2) = CORRETO 
+180.0 -- (4, 5) = CORRETO 
+180.0 -- (5, 4) = CORRETO 
+180.0 -- (6, 7) = CORRETO 
+180.0 -- (7, 6) = CORRETO 
+180.0 -- (8, 9) = CORRETO 
+180.0 -- (9, 8) = CORRETO 
+180.0 -- (10, 11) = CORRETO 
+180.0 -- (11, 10) = CORRETO 
+180.0 -- (12, 13) = CORRETO 
+180.0 -- (13, 12) = CORRETO 
+180.0 -- (14, 15) = CORRETO 
+180.0 -- (15, 14) = CORRETO 
+180.0 -- (16, 17) = CORRETO 
+180.0 -- (17, 16) = CORRETO 
+180.0 -- (18, 19) = CORRETO 
+180.0 -- (19, 18) = CORRETO 
+180.0 -- (20, 21) = CORRETO 
+180.0 -- (21, 20) = CORRETO 
+180.0 -- (22, 23) = CORRETO 
+180.0 -- (23, 22) = CORRETO 
+180.0 -- (24, 25) = CORRETO 
+180.0 -- (25, 24) = CORRETO 
+180.0 -- (26, 27) = CORRETO 
+180.0 -- (27, 26) = CORRETO 
+180.0 -- (28, 29) = CORRETO 
+180.0 -- (29, 28) = CORRETO 
+180.0 -- (30, 31) = CORRETO 
+180.0 -- (31, 30) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 4:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 8:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 9:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 10: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 11: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 12: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 13: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 14: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 15: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 16: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 17: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 18: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 19: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 20: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 21: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 22: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 23: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 24: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 25: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 26: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 27: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 28: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 29: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 30: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 31: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 192 
+
+
+
+ --------------------  RODADA 7 ---------------------- 
+210.0 -- (0, 2) = CORRETO 
+210.0 -- (1, 3) = CORRETO 
+210.0 -- (2, 0) = CORRETO 
+210.0 -- (3, 1) = CORRETO 
+210.0 -- (4, 6) = CORRETO 
+210.0 -- (5, 7) = CORRETO 
+210.0 -- (6, 4) = CORRETO 
+210.0 -- (7, 5) = CORRETO 
+210.0 -- (8, 10) = CORRETO 
+210.0 -- (9, 11) = CORRETO 
+210.0 -- (10, 8) = CORRETO 
+210.0 -- (11, 9) = CORRETO 
+210.0 -- (12, 14) = CORRETO 
+210.0 -- (13, 15) = CORRETO 
+210.0 -- (14, 12) = CORRETO 
+210.0 -- (15, 13) = CORRETO 
+210.0 -- (16, 18) = CORRETO 
+210.0 -- (17, 19) = CORRETO 
+210.0 -- (18, 16) = CORRETO 
+210.0 -- (19, 17) = CORRETO 
+210.0 -- (20, 22) = CORRETO 
+210.0 -- (21, 23) = CORRETO 
+210.0 -- (22, 20) = CORRETO 
+210.0 -- (23, 21) = CORRETO 
+210.0 -- (24, 26) = CORRETO 
+210.0 -- (25, 27) = CORRETO 
+210.0 -- (26, 24) = CORRETO 
+210.0 -- (27, 25) = CORRETO 
+210.0 -- (28, 30) = CORRETO 
+210.0 -- (29, 31) = CORRETO 
+210.0 -- (30, 28) = CORRETO 
+210.0 -- (31, 29) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 4:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 8:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 9:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 10: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 11: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 12: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 13: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 14: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 15: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 16: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 17: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 18: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 19: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 20: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 21: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 22: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 23: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 24: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 25: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 26: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 27: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 28: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 29: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 30: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 31: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 224 
+
+
+
+ --------------------  RODADA 8 ---------------------- 
+240.0 -- (0, 4) = CORRETO 
+240.0 -- (1, 5) = CORRETO 
+240.0 -- (2, 6) = CORRETO 
+240.0 -- (3, 7) = CORRETO 
+240.0 -- (4, 0) = CORRETO 
+240.0 -- (5, 1) = CORRETO 
+240.0 -- (6, 2) = CORRETO 
+240.0 -- (7, 3) = CORRETO 
+240.0 -- (8, 12) = CORRETO 
+240.0 -- (9, 13) = CORRETO 
+240.0 -- (10, 14) = CORRETO 
+240.0 -- (11, 15) = CORRETO 
+240.0 -- (12, 8) = CORRETO 
+240.0 -- (13, 9) = CORRETO 
+240.0 -- (14, 10) = CORRETO 
+240.0 -- (15, 11) = CORRETO 
+240.0 -- (16, 20) = CORRETO 
+240.0 -- (17, 21) = CORRETO 
+240.0 -- (18, 22) = CORRETO 
+240.0 -- (19, 23) = CORRETO 
+240.0 -- (20, 16) = CORRETO 
+240.0 -- (21, 17) = CORRETO 
+240.0 -- (22, 18) = CORRETO 
+240.0 -- (23, 19) = CORRETO 
+240.0 -- (24, 28) = CORRETO 
+240.0 -- (25, 29) = CORRETO 
+240.0 -- (26, 30) = CORRETO 
+240.0 -- (27, 31) = CORRETO 
+240.0 -- (28, 24) = CORRETO 
+240.0 -- (29, 25) = CORRETO 
+240.0 -- (30, 26) = CORRETO 
+240.0 -- (31, 27) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 4:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 8:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 9:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 10: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 11: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 12: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 13: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 14: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 15: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 16: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 17: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 18: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 19: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 20: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 21: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 22: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 23: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 24: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 25: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 26: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 27: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 28: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 29: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 30: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 31: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 256 
+
+
+
+ --------------------  RODADA 9 ---------------------- 
+270.0 -- (0, 8) = CORRETO 
+270.0 -- (1, 9) = CORRETO 
+270.0 -- (2, 10) = CORRETO 
+270.0 -- (3, 11) = CORRETO 
+270.0 -- (4, 12) = CORRETO 
+270.0 -- (5, 13) = CORRETO 
+270.0 -- (6, 14) = CORRETO 
+270.0 -- (7, 15) = CORRETO 
+270.0 -- (8, 0) = CORRETO 
+270.0 -- (9, 1) = CORRETO 
+270.0 -- (10, 2) = CORRETO 
+270.0 -- (11, 3) = CORRETO 
+270.0 -- (12, 4) = CORRETO 
+270.0 -- (13, 5) = CORRETO 
+270.0 -- (14, 6) = CORRETO 
+270.0 -- (15, 7) = CORRETO 
+270.0 -- (16, 24) = CORRETO 
+270.0 -- (17, 25) = CORRETO 
+270.0 -- (18, 26) = CORRETO 
+270.0 -- (19, 27) = CORRETO 
+270.0 -- (20, 28) = CORRETO 
+270.0 -- (21, 29) = CORRETO 
+270.0 -- (22, 30) = CORRETO 
+270.0 -- (23, 31) = CORRETO 
+270.0 -- (24, 16) = CORRETO 
+270.0 -- (25, 17) = CORRETO 
+270.0 -- (26, 18) = CORRETO 
+270.0 -- (27, 19) = CORRETO 
+270.0 -- (28, 20) = CORRETO 
+270.0 -- (29, 21) = CORRETO 
+270.0 -- (30, 22) = CORRETO 
+270.0 -- (31, 23) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 4:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 8:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 9:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 10: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 11: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 12: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 13: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 14: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 15: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 16: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 17: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 18: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 19: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 20: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 21: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 22: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 23: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 24: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 25: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 26: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 27: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 28: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 29: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 30: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 31: 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 288 
+
+
+
+ --------------------  RODADA 10 ---------------------- 
+300.0 -- (0, 16) = CORRETO 
+
+Rodada não finalizada. 
+
+
+
+
+ ================================================================================ 
+
+ ------------------------------ FIM DA SIMULAÇÃO --------------------------------
+
+Resultados:
+0 evento(s) ocorreu/ocorreram durante a simulação.
+Número de rodadas de testes completas durante a simulação: 9
+Ocorreram 289 testes ao total.
+
+ ================================================================================ 

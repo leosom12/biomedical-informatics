@@ -1,0 +1,138 @@
+./task01 30
+===========================================================
+Algoritmo VRing
+Aluna: Mariana Moreira dos Santos
+Disciplina: Sistemas Distribuidos
+Ultima Modificacao: 15/12/2020
+===========================================================
+
+
+----------------------------------------------------------- 
+Existem 30 processos no sistema.
+O tempo do intervalo de testes é de 30.0 unidades de tempo.
+O tempo máximo de execução é de 150.0 unidades de tempo.
+----------------------------------------------------------- 
+
+O processo 0 testou o processo 1 SEM-FALHA no tempo  30.0
+O processo 1 testou o processo 2 SEM-FALHA no tempo  30.0
+O processo 2 testou o processo 3 SEM-FALHA no tempo  30.0
+O processo 3 testou o processo 4 SEM-FALHA no tempo  30.0
+O processo 4 testou o processo 5 SEM-FALHA no tempo  30.0
+O processo 5 testou o processo 6 SEM-FALHA no tempo  30.0
+O processo 6 testou o processo 7 SEM-FALHA no tempo  30.0
+O processo 7 testou o processo 8 SEM-FALHA no tempo  30.0
+O processo 8 testou o processo 9 SEM-FALHA no tempo  30.0
+O processo 9 testou o processo 10 SEM-FALHA no tempo  30.0
+O processo 10 testou o processo 11 SEM-FALHA no tempo  30.0
+O processo 11 testou o processo 12 SEM-FALHA no tempo  30.0
+O processo 12 testou o processo 13 SEM-FALHA no tempo  30.0
+O processo 13 testou o processo 14 SEM-FALHA no tempo  30.0
+O processo 14 testou o processo 15 SEM-FALHA no tempo  30.0
+O processo 15 testou o processo 16 SEM-FALHA no tempo  30.0
+O processo 16 testou o processo 17 SEM-FALHA no tempo  30.0
+O processo 17 testou o processo 18 SEM-FALHA no tempo  30.0
+O processo 18 testou o processo 19 SEM-FALHA no tempo  30.0
+O processo 19 testou o processo 20 SEM-FALHA no tempo  30.0
+O processo 20 testou o processo 21 SEM-FALHA no tempo  30.0
+O processo 21 testou o processo 22 SEM-FALHA no tempo  30.0
+O processo 22 testou o processo 23 SEM-FALHA no tempo  30.0
+O processo 23 testou o processo 24 SEM-FALHA no tempo  30.0
+O processo 24 testou o processo 25 SEM-FALHA no tempo  30.0
+O processo 25 testou o processo 26 SEM-FALHA no tempo  30.0
+O processo 26 testou o processo 27 SEM-FALHA no tempo  30.0
+O processo 27 testou o processo 28 SEM-FALHA no tempo  30.0
+O processo 28 testou o processo 29 SEM-FALHA no tempo  30.0
+O processo 29 testou o processo 0 SEM-FALHA no tempo  30.0
+O processo 1 falhou no tempo 31.0
+O processo 0 testou o processo 1 FALHO no tempo  60.0
+O processo 2 testou o processo 3 SEM-FALHA no tempo  60.0
+O processo 3 testou o processo 4 SEM-FALHA no tempo  60.0
+O processo 4 testou o processo 5 SEM-FALHA no tempo  60.0
+O processo 5 testou o processo 6 SEM-FALHA no tempo  60.0
+O processo 6 testou o processo 7 SEM-FALHA no tempo  60.0
+O processo 7 testou o processo 8 SEM-FALHA no tempo  60.0
+O processo 8 testou o processo 9 SEM-FALHA no tempo  60.0
+O processo 9 testou o processo 10 SEM-FALHA no tempo  60.0
+O processo 10 testou o processo 11 SEM-FALHA no tempo  60.0
+O processo 11 testou o processo 12 SEM-FALHA no tempo  60.0
+O processo 12 testou o processo 13 SEM-FALHA no tempo  60.0
+O processo 13 testou o processo 14 SEM-FALHA no tempo  60.0
+O processo 14 testou o processo 15 SEM-FALHA no tempo  60.0
+O processo 15 testou o processo 16 SEM-FALHA no tempo  60.0
+O processo 16 testou o processo 17 SEM-FALHA no tempo  60.0
+O processo 17 testou o processo 18 SEM-FALHA no tempo  60.0
+O processo 18 testou o processo 19 SEM-FALHA no tempo  60.0
+O processo 19 testou o processo 20 SEM-FALHA no tempo  60.0
+O processo 20 testou o processo 21 SEM-FALHA no tempo  60.0
+O processo 21 testou o processo 22 SEM-FALHA no tempo  60.0
+O processo 22 testou o processo 23 SEM-FALHA no tempo  60.0
+O processo 23 testou o processo 24 SEM-FALHA no tempo  60.0
+O processo 24 testou o processo 25 SEM-FALHA no tempo  60.0
+O processo 25 testou o processo 26 SEM-FALHA no tempo  60.0
+O processo 26 testou o processo 27 SEM-FALHA no tempo  60.0
+O processo 27 testou o processo 28 SEM-FALHA no tempo  60.0
+O processo 28 testou o processo 29 SEM-FALHA no tempo  60.0
+O processo 29 testou o processo 0 SEM-FALHA no tempo  60.0
+O processo 1 recuperou no tempo 61.0
+O processo 0 testou o processo 1 SEM-FALHA no tempo  90.0
+O processo 2 testou o processo 3 SEM-FALHA no tempo  90.0
+O processo 3 testou o processo 4 SEM-FALHA no tempo  90.0
+O processo 4 testou o processo 5 SEM-FALHA no tempo  90.0
+O processo 5 testou o processo 6 SEM-FALHA no tempo  90.0
+O processo 6 testou o processo 7 SEM-FALHA no tempo  90.0
+O processo 7 testou o processo 8 SEM-FALHA no tempo  90.0
+O processo 8 testou o processo 9 SEM-FALHA no tempo  90.0
+O processo 9 testou o processo 10 SEM-FALHA no tempo  90.0
+O processo 10 testou o processo 11 SEM-FALHA no tempo  90.0
+O processo 11 testou o processo 12 SEM-FALHA no tempo  90.0
+O processo 12 testou o processo 13 SEM-FALHA no tempo  90.0
+O processo 13 testou o processo 14 SEM-FALHA no tempo  90.0
+O processo 14 testou o processo 15 SEM-FALHA no tempo  90.0
+O processo 15 testou o processo 16 SEM-FALHA no tempo  90.0
+O processo 16 testou o processo 17 SEM-FALHA no tempo  90.0
+O processo 17 testou o processo 18 SEM-FALHA no tempo  90.0
+O processo 18 testou o processo 19 SEM-FALHA no tempo  90.0
+O processo 19 testou o processo 20 SEM-FALHA no tempo  90.0
+O processo 20 testou o processo 21 SEM-FALHA no tempo  90.0
+O processo 21 testou o processo 22 SEM-FALHA no tempo  90.0
+O processo 22 testou o processo 23 SEM-FALHA no tempo  90.0
+O processo 23 testou o processo 24 SEM-FALHA no tempo  90.0
+O processo 24 testou o processo 25 SEM-FALHA no tempo  90.0
+O processo 25 testou o processo 26 SEM-FALHA no tempo  90.0
+O processo 26 testou o processo 27 SEM-FALHA no tempo  90.0
+O processo 27 testou o processo 28 SEM-FALHA no tempo  90.0
+O processo 28 testou o processo 29 SEM-FALHA no tempo  90.0
+O processo 29 testou o processo 0 SEM-FALHA no tempo  90.0
+O processo 1 testou o processo 2 SEM-FALHA no tempo  91.0
+O processo 0 testou o processo 1 SEM-FALHA no tempo 120.0
+O processo 2 testou o processo 3 SEM-FALHA no tempo 120.0
+O processo 3 testou o processo 4 SEM-FALHA no tempo 120.0
+O processo 4 testou o processo 5 SEM-FALHA no tempo 120.0
+O processo 5 testou o processo 6 SEM-FALHA no tempo 120.0
+O processo 6 testou o processo 7 SEM-FALHA no tempo 120.0
+O processo 7 testou o processo 8 SEM-FALHA no tempo 120.0
+O processo 8 testou o processo 9 SEM-FALHA no tempo 120.0
+O processo 9 testou o processo 10 SEM-FALHA no tempo 120.0
+O processo 10 testou o processo 11 SEM-FALHA no tempo 120.0
+O processo 11 testou o processo 12 SEM-FALHA no tempo 120.0
+O processo 12 testou o processo 13 SEM-FALHA no tempo 120.0
+O processo 13 testou o processo 14 SEM-FALHA no tempo 120.0
+O processo 14 testou o processo 15 SEM-FALHA no tempo 120.0
+O processo 15 testou o processo 16 SEM-FALHA no tempo 120.0
+O processo 16 testou o processo 17 SEM-FALHA no tempo 120.0
+O processo 17 testou o processo 18 SEM-FALHA no tempo 120.0
+O processo 18 testou o processo 19 SEM-FALHA no tempo 120.0
+O processo 19 testou o processo 20 SEM-FALHA no tempo 120.0
+O processo 20 testou o processo 21 SEM-FALHA no tempo 120.0
+O processo 21 testou o processo 22 SEM-FALHA no tempo 120.0
+O processo 22 testou o processo 23 SEM-FALHA no tempo 120.0
+O processo 23 testou o processo 24 SEM-FALHA no tempo 120.0
+O processo 24 testou o processo 25 SEM-FALHA no tempo 120.0
+O processo 25 testou o processo 26 SEM-FALHA no tempo 120.0
+O processo 26 testou o processo 27 SEM-FALHA no tempo 120.0
+O processo 27 testou o processo 28 SEM-FALHA no tempo 120.0
+O processo 28 testou o processo 29 SEM-FALHA no tempo 120.0
+O processo 29 testou o processo 0 SEM-FALHA no tempo 120.0
+O processo 1 testou o processo 2 SEM-FALHA no tempo 121.0
+O processo 0 testou o processo 1 SEM-FALHA no tempo 150.0
+

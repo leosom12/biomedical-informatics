@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="auto" package="com.audible.application" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <permission android:name="com.audible.application.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.audible.application.permission.C2D_MESSAGE"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+    <uses-permission android:name="com.amazon.identity.permission.CALL_AMAZON_DEVICE_INFORMATION_PROVIDER"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <queries>
+        <intent>
+            <action android:name="android.speech.action.RECOGNIZE_SPEECH"/>
+        </intent>
+    </queries>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="amazon.permission.COLLECT_METRICS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="com.amazon.kindle.cms.CMS_ACCESS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.amazon.dcp.metrics.permission.METRICS_PERMISSION"/>
+    <uses-permission android:name="com.amazon.dcp.config.permission.DYN_CONFIG_VALUES_UPDATED"/>
+    <uses-permission android:name="com.amazon.dcp.settings.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.amazon.identity.auth.device.perm.AUTH_SDK"/>
+    <uses-permission android:name="com.amazon.dcp.sso.permission.USE_DEVICE_CREDENTIALS"/>
+    <uses-permission android:name="com.amazon.dcp.sso.permission.account.changed"/>
+    <uses-permission android:name="com.amazon.dcp.sso.permission.MANAGE_COR_PFM"/>
+    <uses-permission android:name="com.amazon.dcp.sso.permission.CUSTOMER_ATTRIBUTE_SERVICE"/>
+    <uses-permission android:name="com.amazon.dcp.sso.permission.AmazonAccountPropertyService.property.changed"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@mipmap/adaptive_app_icon_orange" android:label="Audible" android:logo="@drawable/actionbar_audible_icon" android:name="com.audible.application.AudibleLegacyApplication" android:networkSecurityConfig="@xml/network_security_config" android:supportsRtl="true" android:theme="@style/Theme.Audible">
+        <provider android:authorities="com.amazon.identity.auth.device.MapInfoProvider.audible" android:exported="true" android:name="com.audible.application.identity.MarketplaceMapInformationProvider" android:permission="com.amazon.identity.permission.CAN_CALL_MAP_INFORMATION_PROVIDER"/>
+        <receiver android:exported="true" android:name="com.audible.application.appindexing.AppIndexingUpdateReceiver" android:permission="com.google.android.gms.permission.APPINDEXING">
+            <intent-filter>
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.audible.application.appindexing.AppIndexingUpdateService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:name="com.audible.application.LegacyAudibleWebViewActivity"/>
+        <activity android:configChanges="@integer/config_maskLocaleOrientationKeyboardKeyboardHiddenLayoutDirectionScreenSize" android:exported="false" android:label="Amazon AuthPortal" android:name="com.amazon.identity.auth.device.AuthPortalUIActivity" android:permission="com.amazon.identity.auth.device.perm.AUTH_SDK" android:windowSoftInputMode="adjustResize"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="MAPIsolateApplication" android:value="true"/>
+        <meta-data android:name="MAPDeviceType" android:value="A10KISP2GWF0E4"/>
+        <meta-data android:name="MAPDeviceAttributeRuntimeOverride" android:value="true"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:name="com.audible.application.settings.LegacyHelpAndSupportWebActivity"/>
+        <activity android:name="com.audible.application.ftue.FtueExperienceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.audible.application.sso.SSOWelcomeActivity"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/marketplace" android:name="com.audible.application.credentials.SelectMarketActivity" android:theme="@style/Theme.Audible"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.audible.application.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/app_name" android:name="com.audible.application.MainLauncher" android:theme="@style/Theme.Audible.Splash">
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="audible.smart.link" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.audible.ca" android:pathPrefix="/listennow" android:scheme="http"/>
+                <data android:host="www.audible.ca" android:pathPrefix="/listennow" android:scheme="https"/>
+                <data android:host="www.audible.it" android:pathPrefix="/listennow" android:scheme="http"/>
+                <data android:host="www.audible.it" android:pathPrefix="/listennow" android:scheme="https"/>
+                <data android:host="www.audible.in" android:pathPrefix="/listennow" android:scheme="http"/>
+                <data android:host="www.audible.in" android:pathPrefix="/listennow" android:scheme="https"/>
+                <data android:host="www.audible.co.jp" android:pathPrefix="/listennow" android:scheme="http"/>
+                <data android:host="www.audible.co.jp" android:pathPrefix="/listennow" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="audible.in" android:pathPrefix="/series" android:scheme="http"/>
+                <data android:host="audible.in" android:pathPrefix="/series" android:scheme="https"/>
+                <data android:pathPrefix="/series" android:scheme="audible"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.audible.com" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.com" android:pathPrefix="/pd" android:scheme="https"/>
+                <data android:host="www.audible.co.uk" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.co.uk" android:pathPrefix="/pd" android:scheme="https"/>
+                <data android:host="www.audible.com.au" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.com.au" android:pathPrefix="/pd" android:scheme="https"/>
+                <data android:host="www.audible.de" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.de" android:pathPrefix="/pd" android:scheme="https"/>
+                <data android:host="www.audible.fr" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.fr" android:pathPrefix="/pd" android:scheme="https"/>
+                <data android:host="www.audible.ca" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.ca" android:pathPrefix="/pd" android:scheme="https"/>
+                <data android:host="www.audible.it" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.it" android:pathPrefix="/pd" android:scheme="https"/>
+                <data android:host="www.audible.in" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.in" android:pathPrefix="/pd" android:scheme="https"/>
+                <data android:host="www.audible.co.jp" android:pathPrefix="/pd" android:scheme="http"/>
+                <data android:host="www.audible.co.jp" android:pathPrefix="/pd" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="audible.com" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.com" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.com" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.com" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="audible.fr" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.fr" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.fr" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.fr" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="audible.de" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.de" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.de" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.de" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="audible.co.uk" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.co.uk" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.co.uk" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.co.uk" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="audible.com.au" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.com.au" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.com.au" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.com.au" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="audible.ca" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.ca" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.ca" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.ca" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="audible.it" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.it" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.it" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.it" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="audible.in" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.in" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.in" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.in" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="audible.co.jp" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="audible.co.jp" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+                <data android:host="www.audible.co.jp" android:pathPattern=".*/clp_.*" android:scheme="http"/>
+                <data android:host="www.audible.co.jp" android:pathPattern=".*/clp_.*" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="audio/audible" android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="audio/vnd.audible.aax" android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="audible"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.audible.application.SplashScreen" android:targetActivity="com.audible.application.MainLauncher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/recommended" android:name="com.audible.application.recommendations.RecommendationsActivity"/>
+        <activity android:name="com.audible.application.deeplink.SignInWrapperActivity" android:noHistory="true"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/shop_store" android:launchMode="singleTask" android:name="com.audible.application.store.ui.ShopStore"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/shop_store" android:launchMode="singleTask" android:name="com.audible.application.store.ui.ShopStoreForBottomNav"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:name="com.audible.application.AudibleWebViewActivity"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:name="com.audible.application.buttonfree.ButtonFreeActivity" android:theme="@style/Theme.Audible"/>
+        <activity android:excludeFromRecents="true" android:label="@string/change_device_name_title" android:name="com.audible.application.DeviceNameChangeActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.audible.application.change_device.name"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/edit_bookmark_name" android:name="com.audible.application.EditBookmarkActivity" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/edit_note" android:name="com.audible.application.player.clips.AddOrEditClipsNotesActivity" android:windowSoftInputMode="adjustResize|stateVisible">
+            <intent-filter>
+                <action android:name="com.audible.application.player.clips.AddOrEditClipsNotesActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|screenLayout|screenSize|uiMode" android:name="com.audible.application.player.clips.ViewClipsBookmarksActivity" android:screenOrientation="locked"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/player_name" android:name="com.audible.application.player.productdetails.DetailsActivity"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|screenLayout|screenSize|uiMode" android:label="@string/settings" android:name="com.audible.application.settings.BrickCitySettingsActivity" android:theme="@style/Theme.Audible.Settings">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.audible.application.settings.SettingsActivity.ACTION_SHOW_SIGN_OUT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/about" android:name="com.audible.application.app.preferences.AboutActivity"/>
+        <activity android:label="@string/additional_notices" android:name="com.audible.application.app.preferences.AdditionalNoticesActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.audible.application.market.additional.notices"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/contact_us" android:name="com.audible.application.app.preferences.CustomerSupportActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.audible.application.market.EMAIL_SUPPORT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/send_bug_report" android:name="com.audible.application.app.preferences.SendBugReportActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.audible.application.market.SEND_BUG_REPORT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.audible.application.discover.DiscoverProductsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.audible.application.discover.DiscoverCategoriesListActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/news_name" android:name="com.audible.application.NewsActivity"/>
+        <activity android:name="com.audible.application.MainNavigationActivity" android:theme="@style/Theme.Audible.Profile"/>
+        <provider android:authorities="com.audible.mobile.stats.persistence.provider.audible" android:exported="false" android:name="com.audible.application.stats.FlavourAwareStatsContentProvider"/>
+        <provider android:authorities="com.audible.application.provider.bookmarks" android:exported="false" android:name="com.audible.application.player.bookmark.AudibleAndroidBookmarksContentProvider" android:syncable="false"/>
+        <provider android:authorities="com.audible.application.catalog.metadata.provider" android:exported="false" android:name="com.audible.application.player.chapters.AudibleAppCatalogMetadataContentProvider" android:syncable="false"/>
+        <provider android:authorities="com.audible.application.catalog.filesystem.provider" android:exported="false" android:name="com.audible.application.coverart.AudibleAndroidCatalogFileSystemContentProvider" android:syncable="false"/>
+        <provider android:authorities="com.audible.application.provider.category_metadata" android:exported="false" android:name="com.audible.application.playlist.dao.CategoryMetadataContentProvider" android:syncable="false"/>
+        <provider android:authorities="com.audible.application.download.provider" android:exported="false" android:name="com.audible.application.bookmarks.AudibleAndroidDownloadContentProvider" android:syncable="false"/>
+        <provider android:authorities="com.audible.application.supplementalcontent.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/supplemental_content_file_paths"/>
+        </provider>
+        <receiver android:name="com.audible.application.stats.receivers.LanguageChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.audible.application.stats.receivers.TimeChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.audible.application.notification.NotificationChannelLocaleChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.audible.application.waze.WazeWakeUpReceiver">
+            <intent-filter>
+                <action android:name="com.waze.sdk.audio.ACTION_INIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.audible.application.stats.services.LanguageChangeIntentService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:label="@string/stats_name" android:name="com.audible.application.stats.fragments.StatsActivity"/>
+        <activity android:label="@string/profile_achievements_title" android:name="com.audible.application.stats.fragments.ProfileAchievementsInterceptorActivity"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:label="@string/channel_post_name" android:name="com.audible.application.ChannelPostActivity"/>
+        <activity android:launchMode="singleTop" android:name="com.audible.application.update.dialog.UpdateDialogActivity" android:theme="@style/AppThemeDialogFragment"/>
+        <activity android:label="@string/title_activity_player" android:launchMode="singleTask" android:name="com.audible.application.player.PlayerActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:label="" android:launchMode="singleTask" android:name="com.audible.application.player.BrickCityPlayerActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:launchMode="singleTask" android:name="com.audible.application.player.chapters.ChaptersListActivity"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:launchMode="singleTask" android:name="com.audible.application.supplementalcontent.PdfReaderActivity"/>
+        <activity android:excludeFromRecents="true" android:label="@string/change_download_format" android:name="com.audible.application.ChangeDownloadFormatActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:name="com.audible.application.util.MessageAlertActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:name="com.audible.application.util.DataUsageAlertActivity" android:theme="@style/Theme.Audible.Translucent.NoActionBar"/>
+        <activity android:launchMode="singleTop" android:name="com.audible.application.identity.SignOutLoadingActivity" android:theme="@style/Theme.Transparent"/>
+        <activity android:name="com.audible.application.player.remote.RemotePlayersDiscoveryActivity"/>
+        <receiver android:name="com.audible.application.util.ApplicationForegroundStatusBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.audible.application.util.ApplicationForegroundStatus"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:name="com.audible.application.util.FailedToReadFromFileAlertActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:label="@string/audible_small_widget_name" android:name="com.audible.application.player.widgets.BasePlayerWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/audible_appwidget_info"/>
+        </receiver>
+        <receiver android:label="@string/audible_large_widget_name" android:name="com.audible.application.player.widgets.LargePlayerWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/audible_large_appwidget_info"/>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="com.audible.application.player.widgets.WidgetReceiver">
+            <intent-filter>
+                <action android:name="com.audible.application.app.ACTION_NEW_BOOKMARK"/>
+                <action android:name="com.audible.application.app.ACTION_PREV_CHAPTER"/>
+                <action android:name="com.audible.application.app.ACTION_NEXT_CHAPTER"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@xml/global_tracker"/>
+        <receiver android:name="com.audible.application.AudibleMediaButtonProcessingReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.car.application.theme" android:resource="@style/CarTheme"/>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/audibleandroidauto_app_desc"/>
+        <service android:exported="true" android:label="@string/app_name" android:name="com.audible.application.car.PremiumMediaBrowserService">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.audible.application.services.DownloadService"/>
+        <service android:name="com.audible.application.player.sleeptimer.SleepTimerService"/>
+        <meta-data android:name="VersionNumber" android:value="version=1111687780"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:launchMode="singleTop" android:name="com.audible.application.search.ui.storesearch.notabsearch.SearchActivity" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.audible.application.search.ui.storesearch.bottomnav.BottomNavSearchActivity" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:name="com.audible.application.library.routing.GlobalLibraryActivityRouter"/>
+        <activity android:name="com.audible.application.library.routing.GlobalLibraryPeriodicalActivityRouter"/>
+        <activity android:name="com.audible.application.library.routing.GlobalLibrarySearchActivityRouter"/>
+        <activity android:name="com.audible.application.library.routing.LucienLibraryRouter"/>
+        <activity android:name="com.audible.application.library.routing.LucienSearchRouter"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_end_action" android:launchMode="singleTop" android:name="com.audible.application.endactions.EndActionsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/review_this_book" android:launchMode="singleTop" android:name="com.audible.application.endactions.ReviewTitleActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.audible.membergiving.activities.OnebookSharingActivity" android:theme="@style/Theme.Audible.Translucent.NoActionBar">
+            <intent-filter>
+                <action android:name="com.audible.membergiving.activities.OnebookSharingActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="No Network Dialog" android:name="com.audible.application.activity.NoNetworkDialogActivity" android:theme="@style/Theme.Transparent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.audible.clips.activities.CreateClipActivity" android:theme="@style/Theme.Audible.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/edit_clip" android:launchMode="singleTask" android:name="com.audible.clips.activities.EditClipActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.example.dynamicpage.DynamicPageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.audible.apphome.video.AppHomeVideoPlayerActivity" android:screenOrientation="landscape"/>
+        <receiver android:name="com.audible.push.NotificationBroadcastReceiver"/>
+        <service android:exported="false" android:name="com.audible.push.fcm.FcmMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.audible.application.listenhistory.ListenHistoryActivity"/>
+        <activity android:name="com.audible.application.profile.expandedcard.MembershipDetailActivity" android:theme="@style/TransitionTheme"/>
+        <activity android:name="com.audible.application.profile.managemembership.ManageMembershipActivity"/>
+        <activity android:launchMode="singleTask" android:name="com.audible.application.activity.CellularWarningDialogActivity" android:theme="@style/Theme.Audible.Translucent.NoActionBar"/>
+        <activity android:launchMode="singleInstance" android:name="com.audible.application.dialog.AlertDialogActivity" android:theme="@style/Theme.Audible.Translucent.NoActionBar"/>
+        <activity android:launchMode="singleTask" android:name="com.audible.application.signin.InterstitialPostSignInActivity" android:noHistory="true"/>
+        <activity android:launchMode="singleTask" android:name="com.audible.application.airtrafficcontrol.ui.OrchestrationFtueActivity" android:noHistory="true" android:screenOrientation="portrait"/>
+        <service android:exported="false" android:name="com.audible.application.metric.MetricLoggerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <meta-data android:name="AudioDataSourceType.HlsAudiblePlayer" android:value="com.audible.mobile.player.sdk.AudiblePlayerFactory"/>
+        <meta-data android:name="AudioDataSourceType.Mp3AudiblePlayer" android:value="com.audible.mobile.player.sdk.AudiblePlayerFactory"/>
+        <meta-data android:name="AudioDataSourceType.Hls" android:value="com.audible.mobile.player.exo.hls.HlsPlayerFactory"/>
+        <meta-data android:name="AudioDataSourceType.Mp3" android:value="com.audible.mobile.player.exo.mp3.Mp3PlayerFactory"/>
+        <meta-data android:name="AudioDataSourceType.AudibleDrmExo" android:value="com.audible.mobile.player.exo.aax.AudibleDrmExoPlayerFactory"/>
+        <meta-data android:name="AudioDataSourceType.Sonos" android:value="com.audible.mobile.sonos.player.SonosPlayerFactory"/>
+        <meta-data android:name="AudioDataSourceType.AudibleDRM" android:value="com.audible.mobile.player.AudibleReadyPlayerFactory"/>
+        <meta-data android:name="AAPConfiguration-audible-android-component-player-streaming" android:value="com.audible.streaming.module.configuration.StreamingPlayerModuleConfiguration"/>
+        <meta-data android:name="AudioDataSourceType.PlayReady" android:value="com.audible.streaming.StreamingPlayerFactory"/>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.AudiobookDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.Audiobook"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.CoverArtDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.CoverArt"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.LibraryDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.Library"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.PositionSyncDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.PositionSync"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.SampleAudiobookDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.SampleAudiobook"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.SamplePositionSyncDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.SamplePositionSync"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.SidecarDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.Sidecar"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.SimilarityCoverArtDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.SimilarityCoverArt"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.SimilarityDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.Similarity"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.SubscriptionDownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.Subscription"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.audible.mobile.download.service.ISMADownloadService">
+            <intent-filter>
+                <action android:name="com.audible.mobile.download.action.CANCEL_DOWNLOAD"/>
+                <action android:name="com.audible.mobile.download.action.START_DOWNLOAD"/>
+                <category android:name="com.audible.mobile.download.category.Isma"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.amazon.identity.auth.accounts.MAPSubAuthenticatorService">
+            <intent-filter>
+                <action android:name="com.amazon.dcp.sso.AccountSubAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="com.amazon.dcp.sso.AccountSubAuthenticator" android:resource="@xml/sub_authenticator"/>
+        </service>
+        <receiver android:exported="true" android:name="com.audible.mobile.metric.attribution.domain.InstallReferralBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="AAPConfiguration-audible-android-component-player-common" android:value="com.audible.mobile.player.module.configuration.PlayerCommonModuleConfiguration"/>
+        <service android:exported="false" android:name="com.audible.mobile.player.service.PlayerService"/>
+        <service android:exported="false" android:name="com.audible.mobile.catalog.filesystem.coverart.CoverArtTransformationService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.audible.mobile.todo.service.TodoQueueService"/>
+        <meta-data android:name="AAPMetadata-Audible-API-BaseUrl" android:value="https://api.audible.com/1.0"/>
+        <service android:exported="false" android:name="com.audible.mobile.journal.service.JournalService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.audible.playersdk.notification.PlayerService"/>
+        <provider android:authorities="com.audible.application.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.audible.application.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <provider android:authorities="com.audible.application.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider"/>
+        <provider android:authorities="com.audible.application.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <activity android:name="com.adobe.marketing.mobile.AssuranceFullScreenTakeoverActivity"/>
+        <receiver android:exported="true" android:name="com.kochava.base.ReferralReceiver" android:priority="999">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="com.amazon.dcp.contracts" android:required="false"/>
+        <uses-library android:name="com.amazon.dcp.contracts.framework" android:required="false"/>
+        <uses-library android:name="com.amazon.client.metrics.api" android:required="false"/>
+        <service android:exported="false" android:name="com.amazon.identity.auth.device.storage.DirtyDataSyncingService">
+            <intent-filter>
+                <action android:name="com.amazon.identity.action.SYNC_DIRTY_DATA"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.amazon.identity.auth.device.storage.DatabaseCleaner$DatabaseCleaningService">
+            <intent-filter>
+                <action android:name="com.amazon.identity.action.CLEAN_DATA"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="false" android:name="com.amazon.identity.auth.device.storage.LambortishClock$ChangeTimestampsBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.amazon.identity.auth.accounts.SessionUserChangedToAccountForPackageChangedAdpater">
+            <intent-filter>
+                <action android:name="com.amazon.dcp.sso.action.session.users.changed"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

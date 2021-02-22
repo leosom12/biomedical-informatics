@@ -1,0 +1,265 @@
+./version01 8
+
+===========================================================
+Algoritmo VCube - Versão 01
+Aluna: Mariana Moreira dos Santos
+Disciplina: Sistemas Distribuídos
+Última Modificação: 02 de fevereiro de 2021.
+===========================================================
+
+----------------------------------------------------------- 
+Existem 8 processos e 3 clusters no sistema.
+O tempo do intervalo de testes é de 30.0 unidades de tempo.
+O tempo máximo de execução é de 300.0 unidades de tempo.
+
+TEMPO -- (testador, testado) = resultado do teste
+----------------------------------------------------------- 
+
+
+ --------------------  RODADA 1 ---------------------- 
+
+ 30.0 -- (0, 1) = CORRETO 
+ 30.0 -- (1, 0) = CORRETO 
+ 30.0 -- (2, 3) = CORRETO 
+ 30.0 -- (3, 2) = CORRETO 
+ 30.0 -- (4, 5) = CORRETO 
+ 30.0 -- (5, 4) = CORRETO 
+ 30.0 -- (6, 7) = CORRETO 
+ 30.0 -- (7, 6) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 2:  -1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  -1  -1  -1  -1  0  0  -1  -1 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  0  0  -1  -1 
+VETOR STATE DO PROCESSO 6:  -1  -1  -1  -1  -1  -1  0  0 
+VETOR STATE DO PROCESSO 7:  -1  -1  -1  -1  -1  -1  0  0 
+
+Número de testes realizados até o momento: 8 
+
+
+
+ --------------------  RODADA 2 ---------------------- 
+
+O processo 0 falhou no tempo 31.0
+
+ 60.0 -- (1, 3) = CORRETO 
+ 60.0 -- (2, 0) = PROCESSO FALHO 
+ 60.0 -- (2, 1) = CORRETO 
+ 60.0 -- (3, 1) = CORRETO 
+ 60.0 -- (4, 6) = CORRETO 
+ 60.0 -- (5, 7) = CORRETO 
+ 60.0 -- (6, 4) = CORRETO 
+ 60.0 -- (7, 5) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 2:  1  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  -1  -1  -1  -1  0  0  0  0 
+
+Número de testes realizados até o momento: 16 
+
+
+
+ --------------------  RODADA 3 ---------------------- 
+
+O processo 2 falhou no tempo 90.0
+
+ 90.0 -- (1, 5) = CORRETO 
+ 90.0 -- (3, 7) = CORRETO 
+ 90.0 -- (4, 0) = PROCESSO FALHO 
+ 90.0 -- (4, 1) = CORRETO 
+ 90.0 -- (5, 1) = CORRETO 
+ 90.0 -- (6, 2) = PROCESSO FALHO 
+ 90.0 -- (6, 3) = CORRETO 
+ 90.0 -- (7, 3) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 4:  1  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 24 
+
+
+
+ --------------------  RODADA 4 ---------------------- 
+
+O processo 3 falhou no tempo 110.0
+
+120.0 -- (1, 0) = PROCESSO FALHO 
+120.0 -- (4, 5) = CORRETO 
+120.0 -- (5, 4) = CORRETO 
+120.0 -- (6, 7) = CORRETO 
+120.0 -- (7, 6) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  1  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  -1  1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  1  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 29 
+
+
+
+ --------------------  RODADA 5 ---------------------- 
+
+O processo 5 falhou no tempo 150.0
+
+150.0 -- (1, 3) = PROCESSO FALHO 
+150.0 -- (1, 2) = PROCESSO FALHO 
+150.0 -- (4, 6) = CORRETO 
+150.0 -- (6, 4) = CORRETO 
+150.0 -- (7, 5) = PROCESSO FALHO 
+150.0 -- (7, 4) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  -1  1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  1  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  -1  1  -1  -1 
+VETOR STATE DO PROCESSO 6:  0  0  1  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  1  0  0 
+
+Número de testes realizados até o momento: 35 
+
+
+
+ --------------------  RODADA 6 ---------------------- 
+180.0 -- (1, 5) = PROCESSO FALHO 
+180.0 -- (1, 4) = CORRETO 
+180.0 -- (4, 0) = PROCESSO FALHO 
+180.0 -- (4, 1) = CORRETO 
+180.0 -- (6, 2) = PROCESSO FALHO 
+180.0 -- (6, 3) = PROCESSO FALHO 
+180.0 -- (6, 0) = PROCESSO FALHO 
+180.0 -- (6, 1) = CORRETO 
+180.0 -- (7, 3) = PROCESSO FALHO 
+180.0 -- (7, 2) = PROCESSO FALHO 
+180.0 -- (7, 1) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  1  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  1  0  1  1  0  1  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  -1  1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  -1  1  -1  -1 
+VETOR STATE DO PROCESSO 6:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  1  0  1  1  0  1  0  0 
+
+Número de testes realizados até o momento: 46 
+
+
+
+ --------------------  RODADA 7 ---------------------- 
+
+O processo 0 recuperou no tempo 200.0
+
+
+O processo 2 recuperou no tempo 200.0
+
+
+O processo 3 recuperou no tempo 200.0
+
+
+O processo 5 recuperou no tempo 200.0
+
+210.0 -- (1, 0) = CORRETO 
+210.0 -- (4, 5) = CORRETO 
+210.0 -- (6, 7) = CORRETO 
+210.0 -- (7, 6) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  -1  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  1  1  0  1  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  0  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  -1  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  -1  0  -1  -1 
+VETOR STATE DO PROCESSO 6:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  1  0  1  1  0  1  0  0 
+
+Número de testes realizados até o momento: 50 
+
+
+
+ --------------------  RODADA 8 ---------------------- 
+230.0 -- (0, 1) = CORRETO 
+230.0 -- (2, 3) = CORRETO 
+230.0 -- (3, 2) = CORRETO 
+230.0 -- (5, 4) = CORRETO 
+240.0 -- (1, 3) = CORRETO 
+240.0 -- (4, 6) = CORRETO 
+240.0 -- (6, 4) = CORRETO 
+240.0 -- (7, 5) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  -1  -1  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  1  0  0 
+VETOR STATE DO PROCESSO 2:  -1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  -1  -1  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  0  0  -1  -1 
+VETOR STATE DO PROCESSO 6:  1  0  1  1  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  1  0  1  1  0  0  0  0 
+
+Número de testes realizados até o momento: 58 
+
+
+
+ --------------------  RODADA 9 ---------------------- 
+260.0 -- (0, 2) = CORRETO 
+260.0 -- (2, 0) = CORRETO 
+260.0 -- (3, 1) = CORRETO 
+260.0 -- (5, 7) = CORRETO 
+270.0 -- (1, 5) = CORRETO 
+270.0 -- (4, 0) = CORRETO 
+270.0 -- (6, 2) = CORRETO 
+270.0 -- (7, 3) = CORRETO 
+
+VETOR STATE DO PROCESSO 0:  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 1:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 2:  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 3:  0  0  0  0  -1  -1  -1  -1 
+VETOR STATE DO PROCESSO 4:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 5:  -1  -1  -1  -1  0  0  0  0 
+VETOR STATE DO PROCESSO 6:  0  0  0  0  0  0  0  0 
+VETOR STATE DO PROCESSO 7:  0  0  0  0  0  0  0  0 
+
+Número de testes realizados até o momento: 66 
+
+
+
+ --------------------  RODADA 10 ---------------------- 
+290.0 -- (0, 4) = CORRETO 
+290.0 -- (2, 6) = CORRETO 
+290.0 -- (3, 7) = CORRETO 
+290.0 -- (5, 1) = CORRETO 
+300.0 -- (1, 0) = CORRETO 
+Rodada não finalizada. 
+
+
+
+
+ ================================================================================ 
+
+ ------------------------------ FIM DA SIMULAÇÃO --------------------------------
+
+Resultados:
+8 evento(s) ocorreu/ocorreram durante a simulação.
+Número de rodadas de testes completas durante a simulação: 9
+Ocorreram 71 testes ao total.
+
+ ================================================================================ 

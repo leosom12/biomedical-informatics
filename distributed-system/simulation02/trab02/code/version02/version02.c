@@ -1,0 +1,491 @@
+/*
+*	Autora: Mariana Moreira dos Santos
+*	Universidade Federal do Parana
+*	Disciplina: Sistemas Distribuidos
+*	Informatica Biomedica - GRR20186554 
+*	Ultima atualizacao: 02 de fevereiro de 2021. 
+*
+*	Trabalho Pratico 02: Implementacao do algoritmo VCube (versao 02) no ambiente de simulação SMPL.
+*
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+// Biblioteca de simulacao 
+#include "smpl.h"
+
+// Eventos
+#define TEST 1
+#define FAULT 2
+#define RECOVERY 3
+
+// Intervalo de teste
+#define TIME_INTERVAL 30.0
+
+// Quantidade maxima de tempo que a simulacao deve rodar
+#define MAX_TIME 300.0
+
+// Estados
+#define UNKNOWN -1
+#define SEM_FALHA 0
+#define COM_FALHA 1
+
+// Utilizado na funcao POPEN
+#define BUFSIZE 128
+
+// Descritor do processo
+typedef struct {
+	// Identificador de facility do SMPL
+	int id;		
+
+	// Vetor para indicacao dos estados dos processos
+	int *STATE;
+
+	// Vetor para indicar quais processos o nodo ira testar 
+	int *TESTE;
+
+	// Cluster atual que esta sendo testado pelo processo
+	int cluster;
+
+	// O processo ja completou uma rodada?
+	int completou_rodada;
+
+} TipoProcesso;
+
+// Ponteiro
+TipoProcesso *processo;
+
+// Funcao C(i, s) = j
+// Retorna o processo que deve ser testado pelo testador i, no cluster s, na posicao j
+// Processo testado (i)- comeca em 0; cluster (s) - comeca em 1; posicao (j) - comeca em 1
+int functionCis (int i, int s, int j) {
+	int processo; 
+    char buf[BUFSIZE];
+	char command[256];
+	char teste[1024];
+	FILE *fp;
+
+	sprintf(command, "./cisj.o %d %d %d", i, s, j);  
+	fp = popen(command, "r");
+
+    while (fgets(buf, BUFSIZE, fp) != NULL) {
+    	processo = atoi(buf);
+    }
+
+    pclose(fp);
+    return (processo);
+}
+
+int main (int argc, char *argv[]) {
+	// N: numero de processos, token: processo que esta sendo executado
+	static int N, token, event, testado, testador;
+	static int i, r;
+	// Contadores das rodadas
+	int rodada_global = 1;
+	int n_rodadas_por_diagnostico = 0;
+
+	// Contadores dos numeros de testes
+	int n_testes_total = 0;
+	int n_testes_por_diagnostico = 0;
+
+	// Contadores de eventos
+	int n_eventos = 0;
+	int evento = 0;
+	int evento_foi_diagnosticado = 0;
+
+	// Nome da facility
+	static char fa_name[5];
+
+	// Caso o input esteja errado
+	if(argc != 2) {
+		puts ("O input inserido está errado. O uso corretor é o seguinte: ./version02 <número de processos>");
+		exit(1);
+	}
+
+	// N recebe o numero de processos inserido pelo usuario
+	N = atoi(argv[1]);
+
+	smpl(0, "Tarefa 02 - VCube");
+	reset();
+
+	// Indica que existe apenas uma thread trabalhando
+	stream(1);
+
+	// Alocacao de memoria para N processos
+	processo = (TipoProcesso *) malloc(sizeof(TipoProcesso) * N);
+
+	// Inicializando os processos
+	for (i = 0; i < N; i++){
+		// Copia a string para o fa_name
+		memset(fa_name, '\0', 5);
+
+		// Envia a saída formatada para uma string
+		sprintf(fa_name, "%d", i);
+
+		// Setando o ID para o SMPL
+		processo[i].id = facility(fa_name, 1);
+
+		processo[i].STATE = (int*) malloc(sizeof(int) * N); 
+		processo[i].TESTE = (int*) malloc(sizeof(int) * N);
+
+		// Inicializa o STATE do proprio processo como SEM_FALHA
+		processo[i].STATE[i] = SEM_FALHA;
+
+		// Inicializa o STATE de todos os outros processos como UNKNOWN (-1)
+		for(int j = 1; j < N; j++){ 
+			processo[i].STATE[(i+j) % N] = UNKNOWN;
+		}
+
+		// Inicializando o vetor TESTE
+		for(int j = 0; j < N; j++){ 
+			processo[i].TESTE[j] = 0;
+		}
+
+		// Cluster inicial 
+		processo[i].cluster = 1;
+	}
+
+	// Nº de clusters
+	int n_clusters;
+	n_clusters = log2(N);
+	
+	printf("\n");
+	printf("===========================================================\n"); 
+ 	printf("Algoritmo VCube - Versão 02\n");
+  	printf("Aluna: Mariana Moreira dos Santos\n");
+  	printf("Disciplina: Sistemas Distribuídos\n");
+  	printf("Última Modificação: 02 de fevereiro de 2021\n");
+  	printf("===========================================================\n\n"); 
+
+	printf("----------------------------------------------------------- \n");
+	printf("Existem %d processos e %d clusters no sistema.\n", N, n_clusters);
+	printf("O tempo do intervalo de testes é de %4.1f unidades de tempo.\n", TIME_INTERVAL);
+	printf("O tempo máximo de execução é de %4.1f unidades de tempo.\n", MAX_TIME);
+	printf("\n");
+	printf("TEMPO -- (testador, testado) = resultado do teste\n");
+	printf("----------------------------------------------------------- \n");
+	printf("\n");
+
+	printf("\n --------------------  RODADA 1 ---------------------- \n\n");
+
+	// Escalonamento inicial de eventos
+	// Os processos vao executar testes em intervalos de testes
+	for (i = 0; i < N; i++){
+		schedule (TEST, TIME_INTERVAL, i);
+	}
+
+	schedule(FAULT, 31.0, 0);
+	schedule(FAULT, 90.0, 2);
+	schedule(FAULT, 110.0, 3);
+	schedule(FAULT, 110.0, 5);
+
+	schedule(RECOVERY, 200.0, 0);
+	schedule(RECOVERY, 200.0, 2);
+	schedule(RECOVERY, 200.0, 3);
+	schedule(RECOVERY, 200.0, 5);
+
+	while (time() < MAX_TIME){
+		// Retorna o ID do processo que esta sendo executado e qual evento ele esta executando
+		cause(&event, &token);
+
+		switch(event) {
+			case TEST:
+					// Em cada intervalo de testes, determina-se quem testara quem 
+					// Se o processo testador encontrar algum processo correto, o testador obtém informações sobre qualquer “novidade” que o processo testado tenha
+					// Se o processo testador nao encontrar nenhum processo correto, a rodada eh finalizada
+
+					// Apenas processos corretos podem testar outros processos
+					if (status(processo[token].id) != 0) {
+						break;
+					}
+					
+					// Em cada intervalo de testes o vetor deve ser zerado para que, posteriormente, o vetor seja atualizado
+					for (int i = 0; i < N; i++) {
+						for(int j = 0; j < N; j++){ 
+							processo[i].TESTE[j] = 0;
+						}
+					}
+
+					// Quantos processos ha dentro desse cluster? Potencia de 2
+					int n_processos_cluster;
+					n_processos_cluster = (int) pow(2, processo[token].cluster-1);
+
+					// Se o processo atual ja testou todos os seus clusters, reinicia o processo a partir do cluster 1
+					if (processo[token].cluster > n_clusters) {
+						processo[token].cluster = 1;
+					}
+
+					// Calculando quem testara quem nesse intervalo de testes
+					int posicao = 1;
+					int aux = 0;
+					for (int i = 0; i < N; i++) {
+						posicao = 1;
+						aux = 0;
+						while ((aux == 0) & (posicao <= n_processos_cluster)) {
+							// Quem testa o processo i no cluster s?
+							testador = functionCis (i, processo[token].cluster, posicao);
+
+							// Se o testador estiver correto, altera a variavel aux e atualiza vetor do processo testador
+							if (status(processo[testador].id) == 0) {
+								aux = 1;
+								processo[testador].TESTE[i] = 1;
+							} else {
+								// Se o processo testador nao estiver correto, procura pelo proximo processo correto no cluster s
+								posicao++;
+							}
+						}
+					}
+
+					// Iniciando o intervalo de testes
+					for(i = 0; i < N; i++) {
+						// O token ira testar o processo da vez (i)?
+						if (processo[token].TESTE[i] == 1) {
+							// Processo da vez
+							testado = i;
+							
+							// Se o status do processo testado for diferente de 0, o processo está COM FALHA
+							if(status(processo[testado].id) != 0) {
+
+								// Se o processo testado esta falho, o processo testador atualiza o valor na posicao [testado] de seu vetor STATE para 1 (COM FALHA) e exibe mensagem
+								processo[token].STATE[testado] = COM_FALHA;
+		                    	printf("%5.1f -- (%d, %d) = PROCESSO FALHO \n", time(), token, testado);
+
+			                    n_testes_total++;
+
+								if (evento == 1) {
+									n_testes_por_diagnostico++;
+								}
+							}
+
+							// Se o status do processo testado for igual a 0 e o processo testado não for o processo testador, então o processo está CORRETO
+							else if((status(processo[testado].id) == 0) & (token != testado)) {
+
+								// Se o processo testado esta correto, o processo testador atualiza o valor na posicao [testado] de seu vetor STATE para 0 (SEM FALHA) e exibe mensagem
+								processo[token].STATE[testado] = SEM_FALHA;
+		                    	printf("%5.1f -- (%d, %d) = CORRETO \n", time(), token, testado);
+
+			                    // O processo testador (token) obtem quaisquer "novidades" que o testado possui
+			                    // Para isso iremos comparar os vetores STATE[] do testador (token) e testado
+			                    for(int j = 0; j < N; j++) {
+									if (processo[testado].STATE[j] > processo[token].STATE[j]) {
+										processo[token].STATE[j] = processo[testado].STATE[j];
+									}
+								}
+
+								n_testes_total++;
+
+								if (evento == 1) {
+									n_testes_por_diagnostico++;
+								}
+								break;
+							}
+						}
+					}
+
+					// O processo testador testa 1 cluster por rodada
+					processo[token].completou_rodada++;
+					processo[token].cluster++;
+
+					int aux_rodada = 0;
+					int tmp = 0;
+
+					// Uma rodada de testes acontece quando todos os processos CORRETOS testaram PELO MENOS UM de seus clusters
+					// Aqui sera verificado se uma rodada ja ocorreu
+					for (int j = 0; j < N; j++) {
+						// Testando se o processo esta correto
+						if (processo[j].STATE[j] == SEM_FALHA) {
+							// Verifique se ele completou uma rodada 
+							if (processo[j].completou_rodada != 0) {
+								// Completou
+								tmp = 1;
+							}
+							else {
+								// Nao completou
+								tmp = 0;
+							}
+						}
+					}
+
+					// Uma rodada de testes ocorreu
+					if (tmp) {
+						aux_rodada = 1;
+
+						for (int j = 0; j < N; j++) {
+							processo[j].completou_rodada = 0;
+						}
+
+						printf("\n");
+						for (int j = 0; j < N; j++) {
+							if (j <= 9) {
+								printf("VETOR STATE DO PROCESSO %d: ", j);
+									for (int i = 0; i < N; i++) {
+									printf(" %d ", processo[j].STATE[i]);
+								}	
+								printf("\n");
+							} else {
+								printf("VETOR STATE DO PROCESSO %d:", j);
+									for (int i = 0; i < N; i++) {
+									printf(" %d ", processo[j].STATE[i]);
+								}	
+								printf("\n");
+							}
+						}
+
+						printf("\n");
+						printf("Número de testes realizados até o momento: %d \n", n_testes_total);	
+
+						rodada_global++;
+					}
+
+					// Se uma rodada de testes ocorreu E a flag evento esta ligada, verificaremos se o evento em questao foi diagnosticado
+					if (aux_rodada == 1 & evento == 1) {	
+						processo[i].completou_rodada = 0;
+						tmp = 1;
+						int aux = 0;
+
+						// Comparando os vetores STATE de todos os processos CORRETOS - se os vetores estiverem iguais E o valor do STATE não é desconhecido, ocorreu um diagnóstico 
+							for(int i = 0; i < N; i++) {
+								for (int aux = 0; aux < N; aux++) {
+									for (int j = 0; j < N; j++) {
+										// Se os vetores forem diferentes E os dois processos estiverem corretos, altera a variavel temporaria
+										if ((processo[i].STATE[j] != processo[aux].STATE[j]))  {
+											if ((status(processo[i].id) == 0) & (status(processo[aux].id) == 0)) {
+												tmp = 0;
+												break;
+											}
+										} 
+									} 
+								}
+							}
+
+						// Se os vetores forem iguais, precisa verificar se o valor do STATE não é (-1)
+						if (tmp) {
+							for (int i = 0; i < N; i++) {
+								for (int j = 0; j < N; j++) {
+									// Se o processo estiver correto
+									if ((status(processo[i].id) == 0)) {
+										if (processo[i].STATE[j] == UNKNOWN) {
+											tmp = 0;
+											break;
+										}
+									}
+								}
+							}
+						}
+
+						// Se todos os vetores estiverem iguais e ocorreu um evento
+						if (tmp == 1 & evento == 1) {
+							evento_foi_diagnosticado = 1;
+						}
+						printf("\n");
+
+
+						// Se ocorreu um evento, eu desejo saber quantas rodadas demoraram para se completar o diagnostico
+						if (evento == 1) {
+							n_rodadas_por_diagnostico++;
+						}
+
+
+						// Se ocorreu um evento e este evento foi diagnosticado, faca..
+						if ((evento == 1) & (evento_foi_diagnosticado == 1)) {
+							printf("\n ================================================================================ \n");
+							printf("\n -------------------------  DIAGNÓSTICO COMPLETO  ------------------------------- \n");
+							printf("\n");
+
+							// A pergunta que queremos responder é: após a ocorrência de um evento quantas rodadas de testes são necessárias 
+							// até que todos os processos corretos saibam do evento?
+							printf("TEMPO\n");
+							printf("O diagnóstico foi completo no tempo %4.1f.\n\n", time());
+
+							// A latência do diagnóstico é o número de rodadas de testes que devem ser executadas para completar o diagnóstico.
+							printf("LATÊNCIA DO DIAGNÓSTICO\n");
+							printf("Foi/Foram realizada(s) %d rodada(s) de teste(s) até a completude do diagnóstico.\n\n", n_rodadas_por_diagnostico);
+
+							printf("TESTES REALIZADOS\n");
+							printf("Ocorreu/Ocorreram %d teste(s) para a realização desse diagnóstico.\n\n", n_testes_por_diagnostico);
+
+
+							printf("\n");
+							printf("\n ================================================================================ \n");
+
+							// Atualizando os valores
+							for (int i = 0; i < N; i++) {
+								// processo[i].cluster = 1;
+								processo[i].completou_rodada = 0;
+							}
+
+							n_rodadas_por_diagnostico = 0;
+							n_testes_por_diagnostico = 0;
+							aux_rodada = 0;
+							tmp = 0;
+							evento_foi_diagnosticado = 0;
+							evento = 0;
+						}
+					}
+
+					if (aux_rodada) {
+						printf("\n\n");
+						printf("\n --------------------  RODADA %d ---------------------- \n", rodada_global);	
+					}
+
+
+					schedule(TEST, TIME_INTERVAL, token);
+					break;
+
+			case FAULT:
+				r = request (processo[token].id, token, 0);
+				if (r != 0) {
+					// Isso ocorre caso a gente tenha esquecido de que ele já falhou antes
+					printf("Não foi possível falhar o processo %d", token);
+					exit (1);
+				}
+				printf("O processo %d falhou no tempo %4.1f\n\n", token, time());
+
+				// Como o processo falhou, atualiza as variaveis
+				processo[token].completou_rodada = 0;
+				processo[token].cluster = 1;
+				processo[token].STATE[token] = COM_FALHA;
+
+				// Atualiza o STATE de todos os outros processos como UNKNOWN (-1)
+				for(int j = 1; j < N; j++){ 
+					processo[token].STATE[(token+j) % N] = UNKNOWN;
+				}
+
+				n_eventos++;
+				evento = 1;
+				break;
+
+			case RECOVERY:
+				release(processo[token].id, token);
+				printf ("O processo %d recuperou no tempo %4.1f\n", token, time());
+				schedule (TEST, TIME_INTERVAL, token);
+
+				// Como o processo recuperou, atualiza variaveis
+				processo[token].STATE[token] = SEM_FALHA;
+				processo[token].cluster = 1;
+				processo[token].completou_rodada = 0;
+
+				// Atualiza o STATE de todos os outros processos como UNKNOWN (-1)
+				for(int j = 1; j < N; j++){ 
+					processo[token].STATE[(token+j) % N] = UNKNOWN;
+				}
+				n_eventos++;
+				evento = 1;
+				break;
+		}
+	}
+	printf("\n");
+	printf("Rodada não finalizada. \n");
+	printf("\n\n\n");
+	printf("\n ================================================================================ \n"); 
+	printf("\n ------------------------------ FIM DA SIMULAÇÃO --------------------------------\n");
+	printf("\nResultados:");
+	printf("\n%d evento(s) ocorreu/ocorreram durante a simulação.", n_eventos);
+	printf("\nNúmero de rodadas de testes completas durante a simulação: %d\n", rodada_global-1);
+	printf("Ocorreram %d testes ao total.\n", n_testes_total);
+	printf("\n ================================================================================ \n"); 
+
+	return 0;
+}

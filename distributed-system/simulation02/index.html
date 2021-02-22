@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+<style>
+
+table {
+	width: 75%;
+	align: center;
+	margin-left:auto; 
+    margin-right:auto;
+}
+
+table, td, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td, th {
+	text-align: center;
+	padding: 20px;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #ddd
+}
+
+a {
+	color: #363636
+}
+
+ul {
+  list-style-type: circle;
+}
+
+
+#all {
+	width: 1050px;
+	margin:0 auto;			
+	padding: 10px;
+	font-family: sans-serif;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.hipercubo {
+	width: 30%;
+}
+.tabela {
+	width: 70%;
+}
+
+</style>
+</head>
+<body>
+<div id="all">
+<center>
+<h1 style="color: #C71585">TRABALHO PRÁTICO 02</h1>
+<h2>Sistemas Distribuídos</h2>
+<p>Mariana Moreira dos Santos - mms18@inf.ufpr.br - GRR20186554
+<p><b>Professor:</b> Elias Procópio Duarte Jr.</p>
+<p><b>Última modificação:</b> 02/02/2021</p>
+</center>
+
+<h2 style="color: #C71585">VCube (Virtual Cube)</h2>
+<p>O presente trabalho tem como objetivo a implementação do algoritmo distribuído hierárquico <b><i>VCube (Virtual Cube)</i></b>, um algoritmo para determinação do estado de todos os processos do sistema. 
+Neste algoritmo os processos são organizados em clusters sob o ponto de vista do processo testador, de maneira que um cluster é testado a cada rodada de testes.  </p>
+<p>O algoritmo VCube foi implementado em duas versões. A principal vantagem da segunda versão do algoritmo é a diminuição no número de testes realizados para a identificação de um diagnóstico. </p>
+</br>
+<img src="hipercubo.PNG" alt="Hipercubo" class="center hipercubo">
+</br>
+<p>A figura acima representa a topologia virtual criada pelo algoritmo VCube quando o sistema possui oito processos sem falha. O hipercubo possui diversas propriedades logarítmicas extremamente importantes para sistemas que necessitam de escalabilidade.   </p>
+
+<h3 style="color: #FF69B4">Pontos-Chave</h3>
+<ul>
+<li> Segue o modelo de falhas crash;</li>
+<li> Monitoramento baseado em testes; </li>
+<li> O sistema deve ser síncrono; </li>
+<li> Os canais de comunicação são perfeitos e jamais falham; </li>
+<li> Sistema fully-connected. </li>
+</ul>
+
+<h3 style="color: #FF69B4">Função C(i, s)</h3>
+<p>  A função C(i, s) é essencial para a construção do algoritmo VCube pois a partir dela é possivel a organização dos processos em clusters. Sua saída retorna a lista de processos (em
+ordem) que devem ser testados pelo testador <i>i</i> nos clusters <i>s</i> = 1, 2,…, logN. </p>
+<p> A tabela abaixo representa a saída da função C(i,s) para um sistema com 8 processos corretos. </p>
+<p>Utilizando o processo 0 como exemplo, observa-se que o seu cluster de número é 1 é composto pelo processo 1. Já o seu cluster de número 2, é composto pelos processos 2 e 3. E assim por diante</p>
+</br>
+</br>
+<img src="tabela.png" alt="Função C(i, s)" class="center tabela">
+</br>
+</br>
+
+<h2 style="color: #C71585">Código Fonte</h2>
+<p>A seguir encontra-se o código-fonte das duas versões implementadas do algoritmo VCube. Para melhor visualização o código também foi disponibilizado pela plataforma Code Share.</p>
+</br>
+</br>
+<table>
+  	<tr>
+    <th>Código Fonte</th>
+    <th>Descrição</th> 
+    <th>CodeShare</th> 
+	</tr>
+
+  	<tr>
+    <td><a href="code/version01/version01.c.txt">Versão 01</a></td>
+    <td><p>Em cada intervalo de testes, cada processo correto executa testes em 1 cluster sequencialmente até encontrar um processo correto, ou testar todos os processos falhos. Tendo testado um processo correto, obtém informações sobre os processos restantes do cluster (aqueles que não testou) a partir do processo correto testado.</p></td>
+    <td><a href="https://codeshare.io/G7RKlj">Code Share</a></td>
+  	</tr>
+
+    <tr>
+    <td><a href="code/version02/version02.c.txt">Versão 02</a></td>
+    <td></p>São definidos de antemão com o uso da função C(i,s) executada por e para todos os processos quem são os testadores de quais processos. <b> Esta
+estratégia garante NlogN testes a cada logN rodadas de testes</b>. Ao testar um processo correto, o testador obtém informações sobre qualquer “novidade” que o processo testado tenha.</p></td>
+    <td><a href="https://codeshare.io/5gwzMR">Code Share</a></td>
+  	</tr>
+
+</table>
+</br>
+</br>
+<h2 style="color: #C71585">Logs</h2>
+<p>Para melhor visualização, o seguinte modelo foi utilizado: </p>
+<center> <b> TEMPO -- (testador, testado) = resultado do teste </b> </center>
+<ul>
+  <li><b>Tempo</b> refere-se a que momento da simulação o teste foi realizado;</li>
+  <li>O conjunto <b>(testador, testado)</b> refere-se ao index do processo testador e o index do processo testado. </li>
+  <li>O <b>resultado do teste</b> indica qual estado foi identificado pelo processado testador. As opções são: processo falho ou processo correto.</li>
+</ul>
+<h3 style="color: #FF69B4"> Escalabilidade</h3>
+<p>O primeiro conjunto de logs refere-se a um teste de escalabilidade dos algoritmos. Testaremos as duas versões para valores crescentes de N e não haverá nenhum evento. Note que como não há nenhum evento, não haverá nenhum diagnóstico.</p>
+
+<p><b>Versão 01</b></p>
+<ul>
+<li>Log para testes com <b>150</b> unidades de tempo de simulação </li>
+<a href="log/log_escalabilidade/n4_v1.txt">Log 01 - </a>  4 nodos, não há nodos falhos. </br>
+<a href="log/log_escalabilidade/n8_v1.txt">Log 02 - </a>  8 nodos, não há nodos falhos. </br>
+</ul>
+<ul>
+<li>Log para testes com <b>300</b> unidades de tempo de simulação </li>
+<a href="log/log_escalabilidade/n16_v1.txt">Log 03 - </a>  16 nodos, não há nodos falhos. </br>
+<a href="log/log_escalabilidade/n32_v1.txt">Log 04 - </a>  32 nodos, não há nodos falhos. </br>
+</ul>
+
+<p><b>Versão 02</b></p>
+<ul>
+<li>Log para testes com <b>150</b> unidades de tempo de simulação </li>
+<a href="log/log_escalabilidade/n4_v2.txt">Log 05 - </a> 4 nodos, não há nodos falhos. </br>
+<a href="log/log_escalabilidade/n8_v2.txt">Log 06 - </a> 8 nodos, não há nodos falhos. </br>
+</ul>
+<ul>
+ <li>Log para testes com <b>300</b> unidades de tempo de simulação </li>
+<a href="log/log_escalabilidade/n16_v2.txt">Log 07 - </a> 16 nodos, não há nodos falhos. </br>
+<a href="log/log_escalabilidade/n32_v2.txt">Log 08 - </a> 32 nodos, não há nodos falhos. </br>
+</ul>
+
+<h3 style="color: #FF69B4"> Eventos</h3>
+<p>Agora testaremos aplicando alguns eventos durante a simulação.</p>
+<p><b>Versão 01</b></p>
+<ul>
+<li>Log para testes com <b>150</b> unidades de tempo de simulação </li>
+<a href="log/log_eventos/v1_150_4.txt">Log 09 - </a>  4 nodos, 1 nodo (0) falha no tempo (31.0) e não recupera. </br>
+<a href="log/log_eventos/v1_150_4_2.txt">Log 10 - </a>  4 nodos, 2 nodos (0, 2) falham no tempo (31.0) e não recuperam. </br>
+</ul>
+
+<ul>
+  <li>Log para testes com <b>210</b> unidades de tempo de simulação</li>
+  <a href="log/log_eventos/v1_210_8.txt">Log 11 - </a>  8 nodos, 3 nodos (0, 2 e 3) são falhos nos tempos (31.0, 90.0 e 110.0), respectivamente, e não recuperam. </br>
+  <a href="log/log_eventos/v1_210_8_2.txt">Log 12 - </a>  8 nodos, 3 nodos (0, 2 e 3) são falhos no tempo (31.0) e não recuperam. </br>
+</ul>
+
+<ul>
+<li>Log para testes com <b>300</b> unidades de tempo de simulação </li>
+<a href="log/log_eventos/v1_300_8.txt">Log 13 - </a>  8 nodos, 2 nodos (0 e 5) são falhos nos tempos (31.0 e 90.0), respectivamente, e recuperam no tempo (200.0). </br>
+<a href="log/log_eventos/v1_210_8_2.txt">Log 14 - </a>  8 nodos, 4 nodos (0, 2, 3 e 5) são falhos nos tempos (31.0, 90.0, 110.0 e 110.0), respectivamente, e recuperam no tempo (200.0). </br>
+</ul>
+
+<p><b>Versão 02</b></p>
+<ul>
+<li>Log para testes com <b>150</b> unidades de tempo de simulação </li>
+<a href="log/log_eventos/v2_150_4.txt">Log 15 - </a> 4 nodos, 1 nodo (0) falha no tempo (31.0) e não recupera. </br>
+<a href="log/log_eventos/v1_150_4_2.txt">Log 16 - </a> 4 nodos, 2 nodos (0, 2) falham no tempo (31.0) e não recuperam. </br>
+</ul>
+
+<ul>
+<li>Log para testes com <b>210</b> unidades de tempo de simulação </li>
+<a href="log/log_eventos/v2_210_8.txt">Log 17 - </a>  8 nodos, 3 nodos (0, 2 e 3) são falhos nos tempos (31.0, 90.0 e 110.0), respectivamente, e não recuperam. </br>
+<a href="log/log_eventos/v2_210_8.txt">Log 18 - </a>  8 nodos, 3 nodos (0, 2 e 3) são falhos no tempo (31.0) e não recuperam. </br>
+</ul>
+
+<ul>
+<li>Log para testes com <b>300</b> unidades de tempo de simulação </li>
+<a href="log/log_eventos/v2_300_8.txt">Log 19 - </a>  8 nodos, 3 nodos (0, 2 e 3) são falhos nos tempos (31.0, 90.0 e 110.0), respectivamente, e não recuperam. </br>
+<a href="log/log_eventos/v2_300_8_2.txt">Log 20 - </a>  8 nodos, 4 nodos (0, 2, 3 e 5) são falhos nos tempos (31.0, 90.0, 110.0 e 110.0), respectivamente, e recuperam no tempo (200.0). </br>
+</ul>
+<p>Observe que muitas vezes para uma mesma sequência de eventos, o VCube (versão 02) não é capaz de diagnosticar o evento antes que a simulação termine. Exemplo: log 14 e log 20.</p>
+<h3 style="color: #FF69B4"> Número de Testes</h3>
+<p> Uma das principais características da segunda versão do algoritmo VCube é a diminuição do número de testes executados para a relização de um diagnóstico. Esta versão torna o VCube um algoritmo escalável, característica extremamente importante em sistemas distribuidos.  </p>
+<p>O <b>pior caso do número de testes no VCube (versão 01)</b> ocorre quando todos os processos do maior cluster (com N/2 processos) estão falhos. Os N/2 testadores testam todos os N/2 falhos, isto é, N/2 vezes N/2 que resulta em N²/4.</p>
+<p>Na imagem abaixo podemos observar que os processos 4, 5, 6 e 7 estão falhos, com isso o número de testes seria de: 8²/4 = 16. Podemos visualizar que cada processo (0, 1, 2 e 3) correto executa 4 testes, totalizando o total de <b>16 testes.</b></p>
+</br>
+</br>
+<img src="testes.png" alt="Pior caso - Versão 01" class="center tabela">
+</br>
+</br>
+<p>Agora poderemos observar este teste a partir dos logs. Neste caso o sistema possuirá 8 processos e ocorrerá uma falha em 4 deles.</p>
+<p><b>Versão 01</b></p>
+<ul>
+<li>Log para testes com <b>200</b> unidades de tempo de simulação. </li>
+<a href="log/log_testes/v1.txt">Log 21 - </a>  8 nodos, 4 nodos falham no tempo 0.0. </br>
+</ul>
+
+<p><b>Versão 02</b></p>
+<ul>
+<li>Log para testes com <b>200</b> unidades de tempo de simulação. </li>
+<a href="log/log_testes/v2.txt">Log 22 - </a> 4 nodos, 4 nodos falham no tempo 0.0. </br>
+</ul>
+<p>O número total de testes realizados durante o diagnóstico no VCube (versão 01) é de 24 testes, sendo 8 testes realizados no dois primeiros clusters e 16 testes realizados no último cluster (maior cluster). </p>
+<p>Já na versão 02 observamos que são realizados 20 testes, entre eles 8 testes realizados no dois primeiros clusters e 12 testes realizados no último cluster (maior cluster). </p>
+<p>Desta forma, fica provada a diminuição do número de testes no algoritmo VCube versão 02.</p>
+
+<h2 style="color: #C71585">Detalhes de Implementação</h2>
+<h3 style="color: #FF69B4">Para as Duas Versões</h3>
+<ul>
+  <li><b>TIME_INTERVAL</b></li> Intervalo de tempo constante em que os processos executam testes periodicamente. 
+  </br>
+  <li><b>MAX_TIME</b></li> Tempo limite para que nossa simulação rode.
+  <li><b>Rodada de Testes</b></li> Intervalo de tempo em que todo processo sem-falha testou pelo menos um de seus clusters. Cada processo testa um cluster por rodada. 
+  <li><b>Diagnóstico</b></li> Tempo necessário para que após a ocorrência de um evento, todos os processos corretos saibam do evento.
+  <li><b>Latência do Diagnóstico</b></li> Número de rodadas de testes que devem ser executadas para completar o diagnóstico.
+</ul>
+
+<p><b>Vetor STATE</b></p>
+<p>É utilizado para guardar as informações de diagnóstico dos demais processos. Seus possiveis estados são:
+<ul>
+<li><b>DESCONHECIDO</b> (-1) -- Não se sabe o estado atual do processo. </li>
+<li><b>SEM FALHA </b> (0) -- O processo está ativo/correto. </li>
+<li><b>COM FALHA</b> (1) -- O processo encontra-se inativo. </li>
+</ul></p>
+<h3 style="color: #FF69B4">Versão 01</h3>
+<p>Em cada intervalo de testes, cada processo correto executa testes em 1 cluster sequencialmente até encontrar um processo correto. Se o processo testador encontrar algum processo correto, o testador obtem informações sobre todos os outros processos do clusters (os quais ele não testou). Se o processo testador não encontrar nenhum processo correto dentro do cluster, a rodada de testes é finalizada. </p>
+<h3 style="color: #FF69B4">Versão 02</h3>
+<p>Nesta versão, a cada intervalo de testes, o vetor TESTE é atualizado. Quando o processo atual (token) entra em uma rodada de testes, ele verificará para cada processo se ele é o testador do processo em questão ou não. Caso ele seja, ele testará o processo. Caso ele não seja, ele passará para o próximo processo. </p>
+<p><b>Vetor TESTE</b></p>
+<p> É utilizado para guardar a informação sobre quais processos o nodo deverá testar. Seu tamanho é definido pelo N (número de processos do sistema) e seus possíveis valores são: </p>
+<ul>
+<li>0 -- Não teste o processo </li>
+<li>1 -- Teste o processo </li>
+</ul>
+<p>Cada índice do vetor representa um processo do sistema. Por exemplo, para um sistema com 4 processos considere o nodo 0 que possui o seguinte vetor TESTE: 0 0 0 1. Este vetor representa que o processo 0 deverá testar o processo 3 e não deverá testar o processo 0 (ele mesmo) e os processos 1 e 2. </p>
+</br>
+</br>
+</br>
+</br>
+</br>
+<img src="logo.jpg" alt="UFPR" class="center">
+</id>
+</body>
+</html>

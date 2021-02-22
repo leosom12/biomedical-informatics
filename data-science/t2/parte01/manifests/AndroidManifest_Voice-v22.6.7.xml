@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dist="http://schemas.android.com/apk/distribution" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.hyperionics.avar" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <queries>
+        <package android:name="com.hyperionics.avarLic"/>
+        <package android:name="com.hyperionics.avarcatalogs"/>
+        <package android:name="com.hyperionics.avarSync"/>
+        <package android:name="com.hyperionics.avarfloatbtn"/>
+        <package android:name="com.google.android.documentsui"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+    </queries>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <permission android:name="@string/states_perm" android:protectionLevel="signature"/>
+    <dist:module dist:instant="false"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@drawable/at_voice" android:label="@string/app_name" android:largeHeap="true" android:name="com.hyperionics.avar.TtsApp" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:resizeableActivity="true" android:theme="@style/AvarTheme" android:usesCleartextTraffic="true">
+        <activity android:name="com.hyperionics.avar.OpenBtnSetupActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-8994605087874754~8982746625"/>
+        <meta-data android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT" android:value="true"/>
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <activity android:name="com.hyperionics.avar.CmdActivity" android:theme="@style/NoAnimDialog">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.hyperionics.avar.GET_DEFAULT_PATH"/>
+                <action android:name="com.hyperionics.avar.CMD"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/at_voice" android:label="@string/app_name" android:name="com.hyperionics.avar.StartupActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="com.hyperionics.avar.TMP_FILE_URI"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="*/*"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.fb2"/>
+                <data android:pathPattern=".*\\..*\\.fb2"/>
+                <data android:pathPattern=".*\\..*\\..*\\.fb2"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.fb2"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.fb2"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.fb2"/>
+                <data android:pathPattern=".*\\.azw3"/>
+                <data android:pathPattern=".*\\..*\\.azw3"/>
+                <data android:pathPattern=".*\\..*\\..*\\.azw3"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.azw3"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.azw3"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.azw3"/>
+                <data android:pathPattern=".*\\.avar"/>
+                <data android:pathPattern=".*\\..*\\.avar"/>
+                <data android:pathPattern=".*\\..*\\..*\\.avar"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.avar"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.avar"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.avar"/>
+                <data android:pathPattern=".*\\.json"/>
+                <data android:pathPattern=".*\\..*\\.json"/>
+                <data android:pathPattern=".*\\..*\\..*\\.json"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.json"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.json"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.json"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="message/*"/>
+                <data android:mimeType="text/*"/>
+                <data android:mimeType="application/pdf"/>
+                <data android:mimeType="application/msword"/>
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+                <data android:mimeType="application/rtf"/>
+                <data android:mimeType="application/vnd.oasis.opendocument.text"/>
+                <data android:mimeType="application/epub+zip"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/xhtml+xml"/>
+                <data android:mimeType="application/vnd.wap.xhtml+xml"/>
+                <data android:mimeType="application/x-mobipocket-ebook"/>
+                <data android:mimeType="application/x-mobi8-ebook"/>
+                <data android:mimeType="application/vnd.amazon.ebook"/>
+                <data android:mimeType="application/x-fictionbook+xml"/>
+                <data android:mimeType="application/x-fictionbook"/>
+                <data android:mimeType="application/x-zip-compressed-fb2"/>
+                <data android:mimeType="application/x-zip-compressed"/>
+                <data android:mimeType="application/zip"/>
+                <data android:mimeType="application/json"/>
+            </intent-filter>
+            <intent-filter android:label="@string/read_aloud">
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:enabled="true" android:icon="@drawable/at_voice" android:label="@string/app_name" android:name="com.hyperionics.avar.StartupActivityShareAlias" android:targetActivity="com.hyperionics.avar.StartupActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*"/>
+                <data android:mimeType="message/*"/>
+                <data android:mimeType="text/*"/>
+                <data android:mimeType="application/pdf"/>
+                <data android:mimeType="application/msword"/>
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+                <data android:mimeType="application/rtf"/>
+                <data android:mimeType="application/vnd.oasis.opendocument.text"/>
+                <data android:mimeType="application/xhtml+xml"/>
+                <data android:mimeType="application/vnd.wap.xhtml+xml"/>
+                <data android:mimeType="application/epub+zip"/>
+                <data android:mimeType="application/x-mobipocket-ebook"/>
+                <data android:mimeType="application/x-mobi8-ebook"/>
+                <data android:mimeType="application/vnd.amazon.ebook"/>
+                <data android:mimeType="application/x-fictionbook+xml"/>
+                <data android:mimeType="application/x-zip-compressed-fb2"/>
+                <data android:mimeType="application/x-fictionbook"/>
+                <data android:mimeType="application/x-zip-compressed"/>
+                <data android:mimeType="application/zip"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/json"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <data android:mimeType="text/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:icon="@drawable/at_voice" android:label="@string/app_name_short" android:name="com.hyperionics.avar.StartupActivityAlias" android:targetActivity="com.hyperionics.avar.StartupActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:icon="@drawable/at_voice_add" android:label="@string/add_to_list" android:name="com.hyperionics.avar.SaveOnlyActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter android:icon="@drawable/at_voice_add" android:label="@string/add_to_list">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="message/*"/>
+                <data android:mimeType="text/*"/>
+                <data android:mimeType="application/pdf"/>
+                <data android:mimeType="application/msword"/>
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+                <data android:mimeType="application/rtf"/>
+                <data android:mimeType="application/vnd.oasis.opendocument.text"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <data android:mimeType="text/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:enabled="false" android:icon="@drawable/at_voice_add" android:label="@string/add_to_list" android:name="com.hyperionics.avar.SaveOnlyActivityAlias" android:targetActivity="com.hyperionics.avar.SaveOnlyActivity">
+            <intent-filter android:icon="@drawable/at_voice_add" android:label="@string/add_to_list">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:name="com.hyperionics.avar.ExtractBrowserActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name_short" android:launchMode="singleTask" android:name="com.hyperionics.avar.SpeakReferenceActivity" android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.hyperionics.avar.InfoActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:name="com.hyperionics.avar.RlSettingsActivity" android:parentActivityName="com.hyperionics.avar.SettingsActivity" android:theme="@android:style/Theme.Black">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SettingsActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.avar.PageLook.PageLookActivity" android:parentActivityName="com.hyperionics.avar.SpeakReferenceActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SpeakReferenceActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.hyperionics.avar.FileDialog">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SpeakReferenceActivity"/>
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.avar.BookmarksActivity" android:parentActivityName="com.hyperionics.avar.SpeakReferenceActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SpeakReferenceActivity"/>
+        </activity>
+        <activity android:name="com.hyperionics.avar.RatingPromptActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.hyperionics.avar.ReadListActivity" android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.avar.ContentLoaderBrowser"/>
+        <activity android:name="com.hyperionics.avar.ScreenSetupActivity" android:parentActivityName="com.hyperionics.avar.SettingsActivity" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SettingsActivity"/>
+        </activity>
+        <activity android:name="com.hyperionics.cloud.PocketActivity"/>
+        <service android:enabled="false" android:exported="true" android:name="com.hyperionics.avar.SpeakService"/>
+        <receiver android:enabled="false" android:name="com.hyperionics.avar.MediaButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.hyperionics.avar.BluetoothConnectReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.hyperionics.avar.SettingsActivity" android:parentActivityName="com.hyperionics.avar.SpeakReferenceActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SpeakReferenceActivity"/>
+        </activity>
+        <activity android:name="com.hyperionics.avar.DefaultLangActivity" android:parentActivityName="com.hyperionics.avar.SettingsActivity"/>
+        <activity android:name="com.amazon.device.ads.DTBInterstitialActivity"/>
+        <activity android:name="com.amazon.device.ads.DTBAdActivity"/>
+        <activity android:name="com.hyperionics.avar.SetupRecordActivity" android:parentActivityName="com.hyperionics.avar.SpeakReferenceActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SpeakReferenceActivity"/>
+        </activity>
+        <activity android:name="com.hyperionics.avar.BookmarkEditActivity"/>
+        <activity android:name="com.hyperionics.cloud.LoginActivity" android:theme="@style/Theme.AppCompat.DayNight"/>
+        <receiver android:name="com.hyperionics.avar.DeskWidget.AvarWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/avar_widget_info"/>
+        </receiver>
+        <provider android:authorities="com.hyperionics.avar.artStatesProvider" android:exported="true" android:name="com.hyperionics.utillib.artstates.StatesContentProvider" android:permission="@string/states_perm"/>
+        <provider android:authorities="com.hyperionics.avar.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/my_paths"/>
+        </provider>
+        <activity android:name="com.hyperionics.avar.SettingsAccessActivity" android:parentActivityName="com.hyperionics.avar.SettingsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SettingsActivity"/>
+        </activity>
+        <activity android:name="com.hyperionics.avar.SettingsTopBarActivity" android:parentActivityName="com.hyperionics.avar.SettingsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SettingsActivity"/>
+        </activity>
+        <activity android:name="com.hyperionics.avar.TranslateSetupActivity" android:parentActivityName="com.hyperionics.avar.SettingsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.avar.SettingsActivity"/>
+        </activity>
+        <activity android:name="com.hyperionics.avar.SpeechSettings.SpeechSetActivity" android:parentActivityName="com.hyperionics.avar.SettingsActivity" android:theme="@style/AvarTheme.NoActionBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.avar.ImageViewActivity" android:parentActivityName="com.hyperionics.avar.SpeakReferenceActivity"/>
+        <activity android:name="com.hyperionics.avar.SimpleMediaPlayer.MediaPlayActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.filepicker.FilePickerActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.filepicker.SortOrderActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.filepicker.FoldersToScanActivity"/>
+        <service android:enabled="true" android:exported="true" android:name="com.hyperionics.PdfNativeLib.PdfExtractService" android:process=":pdfReader"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.hyperionics.pdfreader.PdfStartActivity" android:process=":pdfReader" android:theme="@style/Theme.Transparent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.pdfreader.PdfSettingsActivity" android:process=":pdfReader"/>
+        <activity android:name="com.hyperionics.pdfreader.CropRangeActivity" android:process=":pdfReader" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.pdfreader.PdfCropActivity" android:process=":pdfReader" android:theme="@style/AvarTheme.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.pdfreader.GetPassActivity" android:process=":pdfReader"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.pdfreader.OcrSetupActivity" android:parentActivityName="com.hyperionics.pdfreader.PdfSettingsActivity" android:process=":pdfReader"/>
+        <activity android:name="com.hyperionics.ttssetup.EditSpeech.AddRemoveTagsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/hts_app_name" android:name="com.hyperionics.ttssetup.VoiceSelectorActivity"/>
+        <activity android:name="com.hyperionics.ttssetup.AddVoiceActivity"/>
+        <activity android:name="com.hyperionics.ttssetup.EditSpeech.EditSpeechActivity" android:parentActivityName="com.hyperionics.ttssetup.VoiceSelectorActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hyperionics.ttssetup.VoiceSelectorActivity"/>
+        </activity>
+        <activity android:name="com.hyperionics.ttssetup.EditSpeech.EnableTagsActivity"/>
+        <activity android:name="com.hyperionics.gcp.GCloudApiKeyActivity"/>
+        <activity android:name="com.hyperionics.utillib.EmptyTranslucentActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.hyperionics.utillib.SimpleBrowserActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.hyperionics.utillib.MsgActivity" android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"/>
+        <activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent"/>
+        <provider android:authorities="com.hyperionics.avar.plumber-installer" android:enabled="@bool/leak_canary_plumber_auto_install" android:exported="false" android:name="leakcanary.internal.PlumberInstaller"/>
+        <provider android:authorities="com.hyperionics.avar.leakcanary-installer" android:enabled="@bool/leak_canary_watcher_auto_install" android:exported="false" android:name="leakcanary.internal.AppWatcherInstaller$MainProcess"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
+        <activity android:enabled="false" android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <service android:enabled="false" android:exported="true" android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="10901"/>
+        </service>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.hyperionics.avar.tray" android:exported="false" android:multiprocess="false" android:name="net.grandcentrix.tray.provider.TrayContentProvider"/>
+        <provider android:authorities="com.hyperionics.avar.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <provider android:authorities="com.hyperionics.avar.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.ads.AdService"/>
+        <provider android:authorities="com.hyperionics.avar.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <provider android:authorities="com.hyperionics.avar.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

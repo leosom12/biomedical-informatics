@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+<style>
+
+table {
+	width: 75%;
+	align: center;
+	margin-left:auto; 
+    margin-right:auto;
+}
+
+table, td, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td, th {
+	text-align: center;
+	padding: 20px;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #ddd
+}
+
+a {
+	color: hotpink
+}
+
+ul {
+  list-style-type: circle;
+}
+
+#all {
+	width: 1050px;
+	margin:0 auto;			
+	padding: 10px;
+	font-family: sans-serif;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+</style>
+</head>
+<body>
+<div id="all">
+<center>
+<h1 style="color: hotpink">TRABALHO PRÁTICO 01</h1>
+<h2>Sistemas Distribuídos</h2>
+<p>Mariana Moreira dos Santos - mms18@inf.ufpr.br - GRR20186554
+<p><b>Professor:</b> Elias Procópio Duarte Jr.</p>
+<p><b>Última modificação:</b> 15/12/2020</p>
+</center>
+
+<h2 style="color: hotpink">VRing (Virtual Ring)</h2>
+<p>O presente trabalho tem como objetivo a implementação do algoritmo distribuído <b><i>VRing (Virtual Ring)</i></b>, um algoritmo para determinação do estado de todos os processos do sistema. 
+Neste algoritmo os processos formam um anel virtual (ou anel lógico) que nunca se rompe, para isso cada processo sem falha executa testes sequenciais até encontrar outro processo sem falha. Quando isto ocorre, o processo correto testador obtém as informações de diagnóstico do processo testado sobre todos os processos do sistema exceto aqueles que testou nesta rodada. </p>
+
+<img src="vring.jpeg" alt="VRing" class="center">
+<p>Na figura acima é possivel observar que os nodos 1 e 2 encontram-se falhos, já os nodos 0, 3, 4 e 5 encontram-se ativos. Esta imagem demonstra a principal característica do VRing: o anel que nunca se rompe.  </p>
+
+<h3>Pontos-Chave</h3>
+<ul>
+<li> Segue o modelo de falhas crash;</li>
+<li> Algoritmo em forma de anel;</li>
+<li> Monitoramento baseado em testes; </li>
+<li> O sistema deve ser síncrono; </li>
+<li> Os canais de comunicação são perfeitos e jamais falham; </li>
+<li> Sistema fully-connected. </li>
+</ul>
+
+<p> 
+</p>
+
+
+<h2 style="color: hotpink">Tarefas</h2>
+<p>A implementação do algoritmo VRing foi realizada em cinco etapas realizadas a partir de um código inicial disponibilizado pelo professor. A seguir estão descritas cada uma das tarefas com suas respectivas descrições, código-fonte e log.</p>
+<table>
+  <tr>
+    <th>Código Fonte</th>
+    <th>Descrição</th> 
+    <th>Log</th> 
+  </tr>
+  <tr>
+    <td><a href="code/task00.c.txt">task00</a></td>
+    <td><p>Digitar, compilar e executar o programa exemplo, tempo.c.</p></td>
+    <td><a href="log/log00.txt">00</td>
+  </tr>
+
+    <tr>
+    <td><a href="code/task01.c.txt">task01</a></td>
+    <td></p>Fazer cada um dos processos testar o seguinte no anel. Implemente o teste com a função status() do SMPL e imprimir (printf) o resultado de cada teste executado. Por exemplo: “O processo i testou o processo j correto no tempo tal.”</p>
+    </td>
+    <td><a href="log/log01.txt">01</td>
+  </tr>
+
+    <tr>
+    <td><a href="code/task02.c.txt">task02</a></td>
+    <td><p>Cada processo correto executa testes até achar outro processo correto. Lembre-se de tratar o caso em que todos os demais processos estão falhos. Imprimir os testes e resultados.</p></td>
+    <td><a href="log/log02.txt">02</td>
+  </tr>
+
+    <tr>
+    <td><a href="code/task03.c.txt">task03</a></td>
+    <td><p>Cada processo mantém localmente o vetor State[N]. </p>
+		<p> Inicializa o State[N] com -1 (indicando estado “unknown”) para todos os demais processos e 0 para o próprio processo. </p>
+		<p> Nesta tarefa ao executar um teste, o processo atualiza a entrada correspondente no vetor State[N]. </p>
+		<p> Em cada intervalo de testes, mostre o vetor State[N]. </p>
+	</td>
+    <td><a href="log/log03.txt">03</td>
+  </tr>
+
+      <tr>
+    <td><a href="code/task04.c.txt">task04</a></td>
+    <td><p>Quando um processo correto testa outro processo correto obtém as informações de diagnóstico do processo testado sobre todos os processos do sistema exceto aqueles que testou nesta rodada, além do próprio testador. </p></td>
+    <td><a href="log/log04.txt">04</td>
+  </tr>
+</table>
+
+<h2 style="color: hotpink">Trabalho Final</h2>
+<h3>Especificação</h3>
+<p> Implemente o algoritmo VRing no ambiente de simulação SMPL, e mostre resultados para diversos valores de N e diversos eventos - um evento em um processo de cada
+vez, um evento só ocorre depois do evento anterior ser diagnosticado. </p>
+<p> Para cada evento mostre claramente o número de testes executados e a latência para completar o diagnóstico do evento. Cada nodo mantém o vetor STATE[0..N-1] de contadores de eventos, inicializado em -1 (estado “unknown”). </p>
+
+<p> Assume-se que os processos são inicializados sem-falha, a entrada
+correspondente ao próprio processo no vetor STATE[] do testador é setada para zero. Ao
+descobrir um novo evento em um nodo testado, o testador incrementa a entrada
+correspondente no vetor STATE[]. </p>
+
+<p> Para a transferência de informações de diagnóstico lembre-se da estratégia do VRing: quando um processo sem-falha testa outro processo sem-falha obtém informações sobre os estados de todos os processos que não testou no intervalo de testes corrente. </p>
+
+<p> É importante comparar as entradas correspondentes dos vetores STATE (testador e testado) para saber se o testado tem alguma novidade. Se o valor da entrada for maior no vetor STATE do processo testado, então copia a informação. </p>
+
+<h3>Detalhes da Implementação</h3>
+<p>Intervalo de Teste <i>(TIME_INTERVAL)</i> é intervalo de tempo constante em que os processos executam testes periodicamente.  </p>
+<p>O tempo máximo da simulação <i>(MAX_TIME)</i> é o tempo limite para que nossa simulação rode. </p>
+<p>Uma rodada de testes <i>(rodada)</i> é definida como o intervalo de tempo em que todo processo sem-falha testou pelo menos um outro processo sem-falha – ou testou todos os demais processos falhos. </p>
+<p>O vetor de estados <i>(STATE)</i> de um processo é utilizado para guardar as informações de diagnóstico dos demais processos. Seus possiveis estados são:
+<ul>
+<li>DESCONHECIDO -- (-1) </li>
+<li>SEM FALHA (O processo está ativo) -- (0) </li>
+<li>COM FALHA (O processo encontra-se inativo) -- (1) </li>
+</ul>
+</p>
+
+<b>Código Fonte</b> - <a href="code/final_task.c.txt">C</a></li> </br>
+
+
+<h3>Logs</h3>
+<ul>
+<li>Log para testes com 150 unidades de tempo de simulação </li>
+<a href="final/log00.txt">Log 01 - </a> 7 nodos, não há nodos falhos </br>
+<a href="final/log01.txt">Log 02 - </a> 10 nodos, 4 nodos (0, 2, 3 e 5) são falhos nos tempos (31.0, 90.0, 110.0 e 150.0), respectivamente, e não recuperam </br>
+<a href="final/log02.txt">Log 03 - </a> 15 nodos, 3 nodos (0, 2 e 3) são falhos nos tempos (31.0, 90.0, 110.0), respectivamente, e recuperam no tempo (120.0)  </br>
+</br>
+
+<li>Log para testes com 200 unidades de tempo de simulação </li>
+<a href="final/log03.txt">Log 01 - </a> 7 nodos, não há nodos falhos </br>
+<a href="final/log04.txt">Log 02 - </a> 10 nodos, 4 nodos (0, 2, 3 e 5) são falhos nos tempos (31.0, 90.0, 110.0 e 150.0), respectivamente, e não recuperam </br>
+<a href="final/log05.txt">Log 03 - </a> 10 nodos, 3 nodos (0, 2 e 3) são falhos nos tempos (31.0, 90.0 e 110.0), respectivamente, e recuperam nos tempos (120.0, 130.0 e 140.0)  </br>
+</br>
+
+<li>Log para testes com 300 unidades de tempo de simulação </li>
+<a href="final/log06.txt">Log 01 - </a> 7 nodos, não há nodos falhos </br>
+<a href="final/log07.txt">Log 02 - </a> 10 nodos, 4 nodos (0, 2, 3 e 5) são falhos nos tempos (31.0, 90.0, 110.0 e 150.0), respectivamente, e não recuperam </br>
+<a href="final/log08.txt">Log 03 - </a> 10 nodos, 3 nodos (0, 2 e 3) são falhos nos tempos (31.0, 90.0 e 110.0), respectivamente, e recuperam nos tempos (120.0, 130.0 e 140.0) </br>
+</ul>
+</br>
+</br>
+</br>
+</br>
+</br>
+<img src="logo.jpg" alt="UFPR" class="center">
+</id>
+</body>
+</html>
