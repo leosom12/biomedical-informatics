@@ -59,7 +59,7 @@ O diretório manifests contém os AndroidManifests de 11 aplicações diferentes
 
 <p align="center"> python3 script01.py exe </p>
 
-O diretório exe contém 5 aplicações executáveis diferentes. Os arquivos '.exe' são:
+O diretório exe contém 5 aplicações executáveis diferentes:
 - **BitTorrent.exe**
 - **calc.exe**
 - **mspaint.exe**
