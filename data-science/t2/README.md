@@ -5,6 +5,7 @@ Para rodar o script em seu terminal, utilize as seguintes linhas de comando:
 <p align="center"> python3 script.py manifests </p>
 
 O diretório manifests contém os AndroidManifests de 11 aplicações diferentes. A seguir encontra-se a lista de apks escolhidas: 
+<details> <summary>APKs escolhidas</summary>
 - **Entertainment**
     1. Globoplay 3.109.0 (nodpi) (Android 5.0+)
 
@@ -48,7 +49,8 @@ O diretório manifests contém os AndroidManifests de 11 aplicações diferentes
     1. Canva: Graphic Design, Video Collage, Logo Maker 2.98.2 (Android 5.0+)
 
         [https://www.apkmirror.com/apk/canva/canva-free-photo-editor-graphic-design-tool/canva-free-photo-editor-graphic-design-tool-2-98-2-release/canva-graphic-design-video-collage-logo-maker-2-98-2-android-apk-download/download/](https://www.apkmirror.com/apk/canva/canva-free-photo-editor-graphic-design-tool/canva-free-photo-editor-graphic-design-tool-2-98-2-release/canva-graphic-design-video-collage-logo-maker-2-98-2-android-apk-download/download/)
-        
+</details> 
+
 ### Parte 2: Análise de arquivos PE
 **Script 1:**
 
