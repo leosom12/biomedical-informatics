@@ -1,7 +1,7 @@
-# Ciência de Dados para Segurança 
+# 👩‍💻 Ciência de Dados para Segurança 
 ## Prática 02
 Para rodar o script em seu terminal, utilize as seguintes linhas de comando: 
-### Parte 1: Análise de APKs
+### 📌 Parte 1: Análise de APKs
 <p align="center"> python3 script.py manifests </p>
 
 O diretório manifests contém os AndroidManifests de 11 aplicações diferentes. A seguir encontra-se a lista de apks escolhidas: 
@@ -54,7 +54,7 @@ O diretório manifests contém os AndroidManifests de 11 aplicações diferentes
 
 </details> 
 
-### Parte 2: Análise de arquivos PE
+### 📌 Parte 2: Análise de arquivos PE
 **Script 1:**
 
 <p align="center"> python3 script01.py exe </p>
