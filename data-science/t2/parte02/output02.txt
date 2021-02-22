@@ -1,0 +1,54 @@
+python3 script02.py exe BitTorrent.exe Zoom.exe
+
+===================
+
+  Seções comuns
+
+===================
+
+.rdata
+.text
+.rsrc
+.data
+
+============================
+
+  Seções únicas por binário
+
+============================
+
+Seções presentes apenas no binário BitTorrent.exe
+.sxdata
+
+
+Seções presentes apenas no binário Zoom.exe
+.reloc
+
+------------------------------------------------------------------------------------
+
+python3 script02.py exe calc.exe mspaint.exe
+
+===================
+
+  Seções comuns
+
+===================
+
+.reloc
+.text
+.pdata
+.rdata
+.rsrc
+.data
+
+============================
+
+  Seções únicas por binário
+
+============================
+
+Não há seções únicas no binário calc.exe 
+
+Seções presentes apenas no binário mspaint.exe
+.didat
+

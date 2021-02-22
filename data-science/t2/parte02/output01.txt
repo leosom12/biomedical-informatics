@@ -1,0 +1,15 @@
+python3 script01.py exe
+
+
+Nome do binário : [seções executáveis]
+
+calc.exe : .text 
+
+Zoom.exe : .text 
+
+BitTorrent.exe : .text 
+
+mspaint.exe : .text 
+
+WhatsApp.exe : .text 
+

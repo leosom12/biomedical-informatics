@@ -1,15 +1,4 @@
 # Ciência de Dados para Segurança 
-## Prática 02
-### Parte 1: Análise de APKs
-python3 script.py manifests
-
-### Parte 2: Análise de arquivos PE
-Script 01:
-python3 script01.py exe
-
-Script02:
-python3 script02.py exe BitTorrent.exe Zoom.exe
-
 ## Especificação
 ### Parte 1: Análise de APKs
 
