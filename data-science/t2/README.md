@@ -4,6 +4,8 @@ Para rodar o script em seu terminal, utilize as seguintes linhas de comando:
 ### 📌 Parte 1: Análise de APKs
 <p align="center"> python3 script.py manifests </p>
 
+A saída esperada para o script encontra-se no arquivo *output.txt.* 
+
 O diretório manifests contém os AndroidManifests de 11 aplicações diferentes. A seguir encontra-se a lista de apks escolhidas: 
 <details> 
     <summary> APKs escolhidas </summary>
@@ -59,6 +61,8 @@ O diretório manifests contém os AndroidManifests de 11 aplicações diferentes
 
 <p align="center"> python3 script01.py exe </p>
 
+A saída esperada para o script encontra-se no arquivo *output01.txt*. 
+
 O diretório exe contém 5 aplicações executáveis diferentes:
 - **BitTorrent.exe**
 - **calc.exe**
@@ -69,6 +73,8 @@ O diretório exe contém 5 aplicações executáveis diferentes:
 **Script 2:**
 
 Nesta linha de comando os arquivos '.exe' podem ser modificados para qualquer uma das opções contidas no diretório exe. 
+
+A saída esperada para o script encontra-se no arquivo *output02.txt*. 
 
 Exemplos:
 
